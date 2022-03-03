@@ -12,7 +12,7 @@ public class mytest1 {
         //if (System.currentTimeMillis()%3==1){
         //}
         //else {
-            Assert.fail("fail mkk_remote2");
+            Assert.fail("fail mkk_from PR to master");
 
         //};
 
