@@ -10,7 +10,7 @@ public class mytest {
     @Test
     public void foo1master() {
         //if (System.currentTimeMillis()%3==1){
-        //}
+        ///}
         //else {
             Assert.fail("fail mkk");
 
