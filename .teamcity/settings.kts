@@ -27,6 +27,7 @@ version = "2024.03"
 project {
 
     params {
+        password("pR555", "credentialsJSON:a5dc06f0-2af7-435d-a33b-ebe1c19b2e63")
         password("par1", "credentialsJSON:47ee8cb4-be9a-433a-9833-bda5a9096064")
         password("par2", "credentialsJSON:321c8c7f-4941-4042-8c02-61d1711a0283")
         password("par3", "credentialsJSON:fe8cbe53-1728-4cb7-9f0d-7e20c13ee298")
