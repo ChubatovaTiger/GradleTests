@@ -56,6 +56,10 @@ object Build1 : BuildType({
 object Build2 : BuildType({
     name = "build2"
 
+    vcs {
+        root(DslContext.settingsRoot)
+    }
+
     steps {
         script {
             id = "simpleRunner"
