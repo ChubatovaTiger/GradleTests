@@ -1,4 +1,5 @@
 import jetbrains.buildServer.configs.kotlin.*
+import jetbrains.buildServer.configs.kotlin.amazonEC2CloudProfile
 
 /*
 The settings script is an entry point for defining a TeamCity
@@ -25,4 +26,18 @@ To debug in IntelliJ Idea, open the 'Maven Projects' tool window (View
 version = "2024.03"
 
 project {
+
+    features {
+        amazonEC2CloudProfile {
+            id = "amazon-1"
+            name = "profile1"
+            terminateIdleMinutes = 30
+            region = AmazonEC2CloudProfile.Regions.EU_WEST_DUBLIN
+            authType = accessKey {
+                keyId = "credentialsJSON:ed3fa036-bfe4-47ed-8c26-cff55797ef8b"
+                secretKey = "credentialsJSON:94f17856-50e9-4584-9b15-ef8a28fcda04"
+            }
+            param("awsConnectionId", "undefined")
+        }
+    }
 }
