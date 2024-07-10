@@ -33,6 +33,7 @@ project {
             id = "PROJECT_EXT_4"
             profileId = "amazon-1"
             name = "im1"
+ agentPoolId = "-2"
             vpcSubnetId = "subnet-043178c302cabfe37"
             keyPairName = "chubatova-amazon-ireland"
             instanceType = "t3.medium"
