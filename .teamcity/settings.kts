@@ -32,7 +32,6 @@ project {
         amazonEC2CloudImage {
             id = "PROJECT_EXT_4"
             profileId = "amazon-1"
-            agentPoolId = "1"
             name = "im1"
             vpcSubnetId = "subnet-043178c302cabfe37"
             keyPairName = "chubatova-amazon-ireland"
@@ -66,7 +65,6 @@ project {
                 keyId = "credentialsJSON:ed3fa036-bfe4-47ed-8c26-cff55797ef8b"
                 secretKey = "credentialsJSON:94f17856-50e9-4584-9b15-ef8a28fcda04"
             }
-            param("awsConnectionId", "undefined")
         }
     }
 }
