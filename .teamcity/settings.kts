@@ -85,7 +85,7 @@ object B20 : BuildType({
 
     features {
         buildCache {
-            name = "cache123123202020"
+            name = "cache123123"
             publishOnlyChanged = false
             rules = "b1.txt"
         }
