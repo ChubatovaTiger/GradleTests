@@ -30,7 +30,7 @@ version = "2024.07"
 project {
 
     buildType(B1)
-    buildType(B2)
+    buildType(B20)
 
     template(Sdsdf)
 
@@ -60,8 +60,8 @@ object B1 : BuildType({
     disableSettings("matrix")
 })
 
-object B2 : BuildType({
-    name = "b2"
+object B20 : BuildType({
+    name = "b20"
 
     artifactRules = "a*.txt"
 
@@ -85,7 +85,7 @@ object B2 : BuildType({
 
     features {
         buildCache {
-            name = "cache123123"
+            name = "cache123123202020"
             publishOnlyChanged = false
             rules = "b1.txt"
         }
@@ -125,7 +125,7 @@ object Sdsdf : Template({
     }
 
     dependencies {
-        snapshot(B2) {
+        snapshot(B20) {
             reuseBuilds = ReuseBuilds.NO
         }
     }
