@@ -33,6 +33,7 @@ project {
 
     params {
         param("teamcity.optimization.keepOptimizationLog", "true")
+        param("a", "1")
     }
 }
 
