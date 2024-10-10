@@ -48,12 +48,7 @@ object Testtrigger : BuildType({
     steps {
         script {
             id = "simpleRunner"
-            scriptContent = """
-                sleep 300
-                sleep 300
-                sleep 300
-                sleep 300
-            """.trimIndent()
+            scriptContent = "sleep 5"
         }
     }
 })
