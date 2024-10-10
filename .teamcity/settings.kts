@@ -32,8 +32,8 @@ project {
     buildType(Testtrigger2)
 
     params {
-        param("teamcity.optimization.keepOptimizationLog", "true")
         param("a", "1")
+        param("teamcity.optimization.keepOptimizationLog", "true")
     }
 }
 
@@ -51,7 +51,7 @@ object Testtrigger2 : BuildType({
     type = BuildTypeSettings.Type.COMPOSITE
 
     vcs {
-        root(DslContext.settingsRoot)
+        root(DslContext.settingsRoot, "-:.teamcity", "+:folder => folder")
 
         showDependenciesChanges = true
     }
