@@ -62,6 +62,7 @@ object Testtrigger2 : BuildType({
             branchFilter = ""
         }
         schedule {
+            enabled = false
             schedulingPolicy = cron {
                 minutes = "26"
             }
