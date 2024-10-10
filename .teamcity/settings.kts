@@ -58,6 +58,7 @@ object Testtrigger2 : BuildType({
 
     triggers {
         vcs {
+            triggerRules = "-:user=teamcity:**"
             branchFilter = ""
         }
         schedule {
