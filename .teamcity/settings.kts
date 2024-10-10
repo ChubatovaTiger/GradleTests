@@ -49,6 +49,7 @@ object Testtrigger2 : BuildType({
     name = "testtrigger2"
 
     type = BuildTypeSettings.Type.COMPOSITE
+    maxRunningBuilds = 1
 
     vcs {
         root(DslContext.settingsRoot, "-:.teamcity", "+:folder => folder")
