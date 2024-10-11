@@ -93,7 +93,7 @@ object Proj5 : Project({
     name = "proj5"
 
     buildType(Proj5_Build1)
-    buildType(Proj5_Build3)
+    //buildType(Proj5_Build3)
     //buildType(Proj5_Build2)
 })
 
