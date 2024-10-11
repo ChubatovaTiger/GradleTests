@@ -72,12 +72,18 @@ object Sd : PerforceVcsRoot({
 object P1 : Project({
     name = "p1"
 
+    subProject(P1_P3)
     subProject(P1_P2)
 })
 
 
 object P1_P2 : Project({
     name = "p2"
+})
+
+
+object P1_P3 : Project({
+    name = "p3"
 })
 
 
