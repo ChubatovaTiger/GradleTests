@@ -78,6 +78,13 @@ object P1 : Project({
 
 object P1_Subp : Project({
     name = "subp"
+
+    subProject(P1_Subp_Sdfsdf)
+})
+
+
+object P1_Subp_Sdfsdf : Project({
+    name = "sdfsdf"
 })
 
 
