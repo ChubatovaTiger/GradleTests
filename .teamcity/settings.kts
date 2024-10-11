@@ -30,6 +30,7 @@ project {
 
     vcsRoot(Prfrc)
 
+    subProject(Sdf)
     subProject(Project11)
     subProject(Project12)
 }
@@ -70,4 +71,9 @@ object Project12 : Project({
 
 object Project12_Build12 : BuildType({
     name = "build12"
+})
+
+
+object Sdf : Project({
+    name = "sdf"
 })
