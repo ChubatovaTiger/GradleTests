@@ -69,28 +69,10 @@ object Proj4 : Project({
     name = "proj4"
 
     buildType(Proj4_Build1)
-    buildType(Proj4_Build3ab)
 })
 
 object Proj4_Build1 : BuildType({
     name = "build1"
-
-    artifactRules = "a*.txt"
-
-    vcs {
-        root(DslContext.settingsRoot)
-    }
-
-    steps {
-        script {
-            id = "simpleRunner"
-            scriptContent = "echo a > a%system.teamcity.buildType.id%.%build.number%.txt"
-        }
-    }
-})
-
-object Proj4_Build3ab : BuildType({
-    name = "build3"
 
     artifactRules = "a*.txt"
 
