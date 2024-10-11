@@ -103,6 +103,13 @@ object P1_Subp : Project({
 
 object Popopo : Project({
     name = "popopo"
+
+    subProject(Popopo_Popopo)
+})
+
+
+object Popopo_Popopo : Project({
+    name = "popopo"
 })
 
 
