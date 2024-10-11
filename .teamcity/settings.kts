@@ -118,4 +118,11 @@ object Sdf : Project({
 
 object Test1000 : Project({
     name = "test1000"
+
+    subProject(Test1000_P1)
+})
+
+
+object Test1000_P1 : Project({
+    name = "p1"
 })
