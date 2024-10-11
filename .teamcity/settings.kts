@@ -30,11 +30,12 @@ project {
 
     vcsRoot(Sd)
     vcsRoot(Prfrc)
-    vcsRoot(Test1000)
+    vcsRoot(Test1000_1)
 
     subProject(P1)
     subProject(Sdf)
     subProject(Project11)
+    subProject(Test1000)
 }
 
 object Prfrc : PerforceVcsRoot({
@@ -69,7 +70,8 @@ object Sd : PerforceVcsRoot({
     """.trimIndent()
 })
 
-object Test1000 : PerforceVcsRoot({
+object Test1000_1 : PerforceVcsRoot({
+    id("Test1000")
     name = "test1000"
     port = "localhost:1666"
     mode = clientMapping {
@@ -111,4 +113,9 @@ object Project11_Build11 : BuildType({
 
 object Sdf : Project({
     name = "sdf"
+})
+
+
+object Test1000 : Project({
+    name = "test1000"
 })
