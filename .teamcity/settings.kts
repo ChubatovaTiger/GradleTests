@@ -66,6 +66,8 @@ object Project11_Build11 : BuildType({
 object Project12 : Project({
     name = "project12"
 
+    vcsRoot(Project12_Sdf)
+
     buildType(Project12_Build12)
 })
 
@@ -73,14 +75,23 @@ object Project12_Build12 : BuildType({
     name = "build12"
 })
 
-
-object Sdf : Project({
+object Project12_Sdf : PerforceVcsRoot({
     name = "sdf"
-
-    subProject(Sdf_Sdf)
+    port = "localhost:1666"
+    mode = clientMapping {
+        mapping = "//nastiadepo/boss/... //team-city-agent/..."
+    }
+    userName = "jetbrains"
+    password = "credentialsJSON:b17ce248-ac8a-4b16-840a-3af8f08cf27b"
+    workspaceOptions = """
+        Options:        noallwrite clobber nocompress unlocked nomodtime rmdir
+        Host:           %teamcity.agent.hostname%
+        SubmitOptions:  revertunchanged
+        LineEnd:        local
+    """.trimIndent()
 })
 
 
-object Sdf_Sdf : Project({
+object Sdf : Project({
     name = "sdf"
 })
