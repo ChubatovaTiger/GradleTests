@@ -35,6 +35,7 @@ project {
     subProject(P1)
     subProject(Sdf)
     subProject(Project11)
+    subProject(Popopo)
     subProject(Test1000)
 }
 
@@ -100,6 +101,11 @@ object P1_Subp : Project({
 })
 
 
+object Popopo : Project({
+    name = "popopo"
+})
+
+
 object Project11 : Project({
     name = "8"
 
@@ -120,12 +126,6 @@ object Test1000 : Project({
     name = "test1000"
 
     subProject(Test1000_P2)
-    subProject(Test1000_P1)
-})
-
-
-object Test1000_P1 : Project({
-    name = "p1"
 })
 
 
