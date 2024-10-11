@@ -30,6 +30,7 @@ project {
 
     vcsRoot(Sd)
     vcsRoot(Prfrc)
+    vcsRoot(Test1000)
 
     subProject(P1)
     subProject(Sdf)
@@ -68,6 +69,22 @@ object Sd : PerforceVcsRoot({
     """.trimIndent()
 })
 
+object Test1000 : PerforceVcsRoot({
+    name = "test1000"
+    port = "localhost:1666"
+    mode = clientMapping {
+        mapping = "//nastiadepo/boss/... //team-city-agent/..."
+    }
+    userName = "jetbrains"
+    password = "credentialsJSON:b17ce248-ac8a-4b16-840a-3af8f08cf27b"
+    workspaceOptions = """
+        Options:        noallwrite clobber nocompress unlocked nomodtime rmdir
+        Host:           %teamcity.agent.hostname%
+        SubmitOptions:  revertunchanged
+        LineEnd:        local
+    """.trimIndent()
+})
+
 
 object P1 : Project({
     name = "p1"
@@ -78,13 +95,6 @@ object P1 : Project({
 
 object P1_Subp : Project({
     name = "subp"
-
-    subProject(P1_Subp_Sdfsdf)
-})
-
-
-object P1_Subp_Sdfsdf : Project({
-    name = "sdfsdf"
 })
 
 
