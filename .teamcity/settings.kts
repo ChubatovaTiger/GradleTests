@@ -76,4 +76,11 @@ object Project12_Build12 : BuildType({
 
 object Sdf : Project({
     name = "sdf"
+
+    subProject(Sdf_Sdf)
+})
+
+
+object Sdf_Sdf : Project({
+    name = "sdf"
 })
