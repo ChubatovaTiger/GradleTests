@@ -1,4 +1,5 @@
 import jetbrains.buildServer.configs.kotlin.*
+import jetbrains.buildServer.configs.kotlin.vcs.PerforceVcsRoot
 
 /*
 The settings script is an entry point for defining a TeamCity
@@ -27,9 +28,27 @@ version = "2024.03"
 project {
     description = "Contains all other projects"
 
+    vcsRoot(Prfrc)
+
     subProject(Project11)
     subProject(Project12)
 }
+
+object Prfrc : PerforceVcsRoot({
+    name = "prfrc"
+    port = "localhost:1666"
+    mode = clientMapping {
+        mapping = "//nastiadepo/boss/... //team-city-agent/..."
+    }
+    userName = "jetbrains"
+    password = "credentialsJSON:b17ce248-ac8a-4b16-840a-3af8f08cf27b"
+    workspaceOptions = """
+        Options:        noallwrite clobber nocompress unlocked nomodtime rmdir
+        Host:           %teamcity.agent.hostname%
+        SubmitOptions:  revertunchanged
+        LineEnd:        local
+    """.trimIndent()
+})
 
 
 object Project11 : Project({
