@@ -67,7 +67,7 @@ object Proj4 : Project({
     name = "proj4"
 
     buildType(Proj4_Build1)
-    buildType(Proj4_Build3)
+    buildType(Proj4_Build3a)
 })
 
 object Proj4_Build1 : BuildType({
@@ -87,7 +87,7 @@ object Proj4_Build1 : BuildType({
     }
 })
 
-object Proj4_Build3 : BuildType({
+object Proj4_Build3a : BuildType({
     name = "build3"
 
     artifactRules = "a*.txt"
