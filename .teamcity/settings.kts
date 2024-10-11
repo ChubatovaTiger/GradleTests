@@ -94,7 +94,7 @@ object Proj5 : Project({
 
     buildType(Proj5_Build1)
     buildType(Proj5_Build3)
-    buildType(Proj5_Build2)
+    //buildType(Proj5_Build2)
 })
 
 object Proj5_Build1 : BuildType({
