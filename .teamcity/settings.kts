@@ -60,7 +60,6 @@ project {
         }
     }
 
-    subProject(Proj6)
     subProject(Proj5)
     subProject(Proj4)
 }
@@ -133,66 +132,6 @@ object Proj5_Build2 : BuildType({
 })
 
 object Proj5_Build3 : BuildType({
-    name = "build3"
-
-    artifactRules = "a*.txt"
-
-    vcs {
-        root(DslContext.settingsRoot)
-    }
-
-    steps {
-        script {
-            id = "simpleRunner"
-            scriptContent = "echo a > a%system.teamcity.buildType.id%.%build.number%.txt"
-        }
-    }
-})
-
-
-object Proj6 : Project({
-    name = "proj6"
-
-    buildType(Proj6_Build3)
-    buildType(Proj6_Build1)
-    buildType(Proj6_Build2)
-})
-
-object Proj6_Build1 : BuildType({
-    name = "build1"
-
-    artifactRules = "a*.txt"
-
-    vcs {
-        root(DslContext.settingsRoot)
-    }
-
-    steps {
-        script {
-            id = "simpleRunner"
-            scriptContent = "echo a > a%system.teamcity.buildType.id%.%build.number%.txt"
-        }
-    }
-})
-
-object Proj6_Build2 : BuildType({
-    name = "build2"
-
-    artifactRules = "a*.txt"
-
-    vcs {
-        root(DslContext.settingsRoot)
-    }
-
-    steps {
-        script {
-            id = "simpleRunner"
-            scriptContent = "echo a > a%system.teamcity.buildType.id%.%build.number%.txt"
-        }
-    }
-})
-
-object Proj6_Build3 : BuildType({
     name = "build3"
 
     artifactRules = "a*.txt"
