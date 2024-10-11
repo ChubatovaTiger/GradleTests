@@ -31,6 +31,7 @@ project {
     vcsRoot(Sd)
     vcsRoot(Prfrc)
 
+    subProject(P1)
     subProject(Sdf)
     subProject(Project11)
 }
@@ -65,6 +66,11 @@ object Sd : PerforceVcsRoot({
         SubmitOptions:  revertunchanged
         LineEnd:        local
     """.trimIndent()
+})
+
+
+object P1 : Project({
+    name = "p1"
 })
 
 
