@@ -40,6 +40,8 @@ project {
                 secretAccessKey = "credentialsJSON:61577a37-2621-4f7a-b757-893b9dab7a6b"
                 stsEndpoint = "https://sts.eu-west-1.amazonaws.com"
             }
+            allowInSubProjects = true
+            allowInBuilds = true
         }
         s3Storage {
             id = "PROJECT_EXT_5"
