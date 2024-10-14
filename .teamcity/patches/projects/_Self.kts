@@ -54,12 +54,6 @@ changeProject(DslContext.projectId) {
             }
         }
         add {
-            activeStorage {
-                id = "PROJECT_EXT_2"
-                activeStorageID = "DefaultStorage"
-            }
-        }
-        add {
             s3Storage {
                 id = "PROJECT_EXT_3"
                 storageName = "bla"
@@ -70,6 +64,12 @@ changeProject(DslContext.projectId) {
                     awsRegionName = "eu-west-1"
                 }
                 connectionId = "AmazonWebServicesAws"
+            }
+        }
+        add {
+            activeStorage {
+                id = "PROJECT_EXT_4"
+                activeStorageID = "PROJECT_EXT_3"
             }
         }
     }
