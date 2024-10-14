@@ -66,6 +66,19 @@
         <param name="storage.type" value="S3_storage" />
       </parameters>
     </extension>
+    <extension id="blabla" type="storage_settings">
+      <parameters>
+        <param name="aws.external.id" value="TeamCity-server-d5b67dd4-f1fb-43ce-9091-9bff5dcfe2bf" />
+        <param name="aws.region.name" value="eu-west-1" />
+        <param name="awsConnectionId" value="AmazonWebServicesAws" />
+        <param name="storage.s3.bucket.name" value="chubatovawest1" />
+        <param name="storage.s3.bucket.prefix" value="blue" />
+        <param name="storage.s3.forceVirtualHostAddressing" value="true" />
+        <param name="storage.s3.upload.presignedUrl.enabled" value="true" />
+        <param name="storage.s3.verifyIntegrityAfterUpload" value="true" />
+        <param name="storage.type" value="S3_storage" />
+      </parameters>
+    </extension>
   </project-extensions>
   <cleanup />
 </project>
