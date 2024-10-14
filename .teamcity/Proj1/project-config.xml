@@ -44,11 +44,6 @@
         <param name="storage.type" value="S3_storage" />
       </parameters>
     </extension>
-    <extension id="PROJECT_EXT_4" type="active_storage">
-      <parameters>
-        <param name="active.storage.feature.id" value="PROJECT_EXT_3" />
-      </parameters>
-    </extension>
     <extension id="PROJECT_EXT_5" type="storage_settings">
       <parameters>
         <param name="aws.environment" value="" />
@@ -64,6 +59,11 @@
         <param name="storage.s3.upload.presignedUrl.enabled" value="true" />
         <param name="storage.s3.verifyIntegrityAfterUpload" value="true" />
         <param name="storage.type" value="S3_storage" />
+      </parameters>
+    </extension>
+    <extension id="PROJECT_EXT_7" type="active_storage">
+      <parameters>
+        <param name="active.storage.feature.id" value="blabla" />
       </parameters>
     </extension>
     <extension id="blabla" type="storage_settings">
