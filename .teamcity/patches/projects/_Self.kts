@@ -59,5 +59,18 @@ changeProject(DslContext.projectId) {
                 activeStorageID = "DefaultStorage"
             }
         }
+        add {
+            s3Storage {
+                id = "PROJECT_EXT_3"
+                storageName = "bla"
+                bucketName = "chubatovawest1"
+                bucketPrefix = "west"
+                forceVirtualHostAddressing = true
+                awsEnvironment = default {
+                    awsRegionName = "eu-west-1"
+                }
+                connectionId = "AmazonWebServicesAws"
+            }
+        }
     }
 }
