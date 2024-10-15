@@ -16,6 +16,13 @@
     <vcs-settings />
     <requirements />
     <build-triggers />
+    <build-extensions>
+      <extension id="jetbrains.agent.free.space" type="jetbrains.agent.free.space">
+        <parameters>
+          <param name="free-space-work" value="3000gb" />
+        </parameters>
+      </extension>
+    </build-extensions>
     <cleanup />
   </settings>
 </build-type>
