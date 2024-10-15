@@ -19,6 +19,7 @@
     <build-extensions>
       <extension id="jetbrains.agent.free.space" type="jetbrains.agent.free.space">
         <parameters>
+          <param name="free-space-fail-start" value="true" />
           <param name="free-space-work" value="3000gb" />
         </parameters>
       </extension>
