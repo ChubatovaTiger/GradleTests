@@ -10,7 +10,10 @@
     <build-runners>
       <runner id="simpleRunner" name="" type="simpleRunner">
         <parameters>
-          <param name="script.content" value="ehco a" />
+          <param name="script.content"><![CDATA[sleep 20
+sleep 20
+sleep 20
+sleep 20]]></param>
           <param name="teamcity.step.mode" value="default" />
           <param name="use.custom.script" value="true" />
         </parameters>
