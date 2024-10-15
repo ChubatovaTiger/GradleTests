@@ -3,6 +3,9 @@
   <name>yiuyiu</name>
   <description />
   <settings>
+    <disabled-settings>
+      <setting-ref ref="jetbrains.agent.free.space" />
+    </disabled-settings>
     <parameters />
     <build-runners>
       <runner id="simpleRunner" name="" type="simpleRunner">
