@@ -54,6 +54,16 @@ object CommitStatusBB85 : BuildType({
         root(HttpsBbdatacenterQaTeamcityComScmChubChubatovarepoGit)
     }
 
+    triggers {
+        schedule {
+            schedulingPolicy = daily {
+                hour = 15
+            }
+            branchFilter = ""
+            triggerBuild = always()
+        }
+    }
+
     failureConditions {
         javaCrash = false
     }
