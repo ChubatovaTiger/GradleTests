@@ -22,6 +22,10 @@ create(DslContext.projectId, BuildType({
                 echo '##teamcity[buildDetachedFromAgent]'
             """.trimIndent()
         }
+        script {
+            id = "simpleRunner_1"
+            scriptContent = "sleep 20"
+        }
     }
 }))
 
