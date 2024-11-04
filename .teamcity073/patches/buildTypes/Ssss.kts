@@ -16,7 +16,7 @@ changeBuildType(RelativeId("Ssss")) {
         insert(0) {
             script {
                 id = "simpleRunner"
-                scriptContent = """echo "##teamcity[buildProblem description='blue' identity='red']""""
+                scriptContent = """echo "##teamcity[buildProblem description='Out of memory: Java heap space (This problem is reported because OutOfMemoryError has been found in the build log text); tests failed: 1, passed: 30, ignored: 17; error found in teamcity-versioned-settings: WARN - s.VersionedSettingsUpdaterImpl - Failed to generate updated settings for revision 29bbef72eb31ab6e096fa75c9196badf65e6d1c3: Kotlin DSL compilation error' identity='red']""""
             }
         }
     }
