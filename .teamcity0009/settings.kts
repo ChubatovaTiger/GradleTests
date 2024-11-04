@@ -268,6 +268,10 @@ object Bbsubpr1_Bbsuprbbsuprbbsuprbbsuprbbsupr2_Bbsuprbbsuprbbsuprbbsuprbbsupr3_
         }
     }
 
+    failureConditions {
+        javaCrash = false
+    }
+
     features {
         commitStatusPublisher {
             publisher = bitbucketServer {
