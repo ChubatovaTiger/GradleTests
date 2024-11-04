@@ -54,6 +54,10 @@ object CommitStatusBB85 : BuildType({
         root(HttpsBbdatacenterQaTeamcityComScmChubChubatovarepoGit)
     }
 
+    failureConditions {
+        javaCrash = false
+    }
+
     features {
         commitStatusPublisher {
             publisher = bitbucketServer {
