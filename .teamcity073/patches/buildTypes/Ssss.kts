@@ -10,6 +10,11 @@ To apply the patch, change the buildType with id = 'Ssss'
 accordingly, and delete the patch script.
 */
 changeBuildType(RelativeId("Ssss")) {
+    check(paused == false) {
+        "Unexpected paused: '$paused'"
+    }
+    paused = true
+
     expectSteps {
     }
     steps {
