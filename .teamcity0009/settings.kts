@@ -245,6 +245,11 @@ object Bbsubpr1_Bbsuprbbsuprbbsuprbbsuprbbsupr2_Bbsuprbbsuprbbsuprbbsuprbbsupr3_
             id = "step1"
             scriptContent = "echo a"
         }
+        script {
+            name = "step2"
+            id = "step2"
+            scriptContent = "echo b"
+        }
     }
 
     features {
