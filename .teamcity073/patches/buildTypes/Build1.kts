@@ -13,4 +13,12 @@ changeBuildType(RelativeId("Build1")) {
         "Unexpected description: '$description'"
     }
     description = "hello"
+
+    vcs {
+
+        check(cleanCheckout == false) {
+            "Unexpected option value: cleanCheckout = $cleanCheckout"
+        }
+        cleanCheckout = true
+    }
 }
