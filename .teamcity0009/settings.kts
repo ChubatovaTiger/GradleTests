@@ -281,6 +281,11 @@ object Bbsubpr1_Bbsuprbbsuprbbsuprbbsuprbbsupr2_Bbsuprbbsuprbbsuprbbsuprbbsupr3_
             param("stashUsername", "admin")
         }
     }
+
+    dependencies {
+        snapshot(AbsoluteId("id73083_73083")) {
+        }
+    }
 })
 
 
