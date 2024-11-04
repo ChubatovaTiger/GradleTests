@@ -234,6 +234,9 @@ object Bbsubpr1_Bbsuprbbsuprbbsuprbbsuprbbsupr2_Bbsuprbbsuprbbsuprbbsuprbbsupr3_
 
     vcs {
         root(HttpsBbdatacenterQaTeamcityComScmChubChubatovarepoGit)
+
+        cleanCheckout = true
+        showDependenciesChanges = true
     }
 
     features {
