@@ -286,6 +286,10 @@ object Bbsubpr1_Bbsuprbbsuprbbsuprbbsuprbbsupr2_Bbsuprbbsuprbbsuprbbsuprbbsupr3_
         snapshot(AbsoluteId("id73083_73083")) {
         }
     }
+
+    requirements {
+        exists("env.DBUS_SESSION_BUS_ADDRESS")
+    }
 })
 
 
