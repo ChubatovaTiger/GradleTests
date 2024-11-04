@@ -239,6 +239,14 @@ object Bbsubpr1_Bbsuprbbsuprbbsuprbbsuprbbsupr2_Bbsuprbbsuprbbsuprbbsuprbbsupr3_
         showDependenciesChanges = true
     }
 
+    steps {
+        script {
+            name = "step1"
+            id = "step1"
+            scriptContent = "echo a"
+        }
+    }
+
     features {
         commitStatusPublisher {
             publisher = bitbucketServer {
