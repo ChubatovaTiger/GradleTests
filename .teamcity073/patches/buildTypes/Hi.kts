@@ -2,6 +2,7 @@ package patches.buildTypes
 
 import jetbrains.buildServer.configs.kotlin.*
 import jetbrains.buildServer.configs.kotlin.BuildType
+import jetbrains.buildServer.configs.kotlin.buildSteps.script
 import jetbrains.buildServer.configs.kotlin.ui.*
 
 /*
@@ -12,5 +13,15 @@ in the root project, and delete the patch script.
 create(DslContext.projectId, BuildType({
     id("Hi")
     name = "hi"
+
+    steps {
+        script {
+            id = "simpleRunner"
+            scriptContent = """
+                echo a
+                echo '##teamcity[buildDetachedFromAgent]'
+            """.trimIndent()
+        }
+    }
 }))
 
