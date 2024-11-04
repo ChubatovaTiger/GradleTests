@@ -10,6 +10,11 @@ To apply the patch, change the buildType with id = 'Ssss'
 accordingly, and delete the patch script.
 */
 changeBuildType(RelativeId("Ssss")) {
+    check(name == "ssss") {
+        "Unexpected name: '$name'"
+    }
+    name = "my broken config"
+
     expectSteps {
     }
     steps {
