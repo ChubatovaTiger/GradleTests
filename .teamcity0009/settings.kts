@@ -2,6 +2,7 @@ import jetbrains.buildServer.configs.kotlin.*
 import jetbrains.buildServer.configs.kotlin.buildFeatures.commitStatusPublisher
 import jetbrains.buildServer.configs.kotlin.buildFeatures.pullRequests
 import jetbrains.buildServer.configs.kotlin.buildSteps.script
+import jetbrains.buildServer.configs.kotlin.triggers.schedule
 import jetbrains.buildServer.configs.kotlin.vcs.GitVcsRoot
 
 /*
@@ -249,6 +250,14 @@ object Bbsubpr1_Bbsuprbbsuprbbsuprbbsuprbbsupr2_Bbsuprbbsuprbbsuprbbsuprbbsupr3_
             name = "step2"
             id = "step2"
             scriptContent = "echo b"
+        }
+    }
+
+    triggers {
+        schedule {
+            branchFilter = ""
+            triggerBuild = always()
+            withPendingChangesOnly = false
         }
     }
 
