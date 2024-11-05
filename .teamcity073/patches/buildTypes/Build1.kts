@@ -21,4 +21,12 @@ changeBuildType(RelativeId("Build1")) {
         }
         cleanCheckout = true
     }
+
+    dependencies {
+        add(AbsoluteId("Tests_Tests")) {
+            snapshot {
+            }
+        }
+
+    }
 }
