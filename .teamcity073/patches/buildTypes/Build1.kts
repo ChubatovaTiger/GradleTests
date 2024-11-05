@@ -14,12 +14,22 @@ changeBuildType(RelativeId("Build1")) {
     }
     description = "hello"
 
+    check(type == BuildTypeSettings.Type.REGULAR) {
+        "Unexpected option value: type = $type"
+    }
+    type = BuildTypeSettings.Type.COMPOSITE
+
     vcs {
 
         check(cleanCheckout == false) {
             "Unexpected option value: cleanCheckout = $cleanCheckout"
         }
         cleanCheckout = true
+
+        check(showDependenciesChanges == false) {
+            "Unexpected option value: showDependenciesChanges = $showDependenciesChanges"
+        }
+        showDependenciesChanges = true
     }
 
     dependencies {
