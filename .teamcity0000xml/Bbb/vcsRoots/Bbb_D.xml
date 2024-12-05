@@ -7,7 +7,7 @@
   <param name="branch" value="refs/heads/master" />
   <param name="ignoreKnownHosts" value="true" />
   <param name="submoduleCheckout" value="CHECKOUT" />
-  <param name="tokenId" value="tc_token_id:CID_42aa607598483217a970dfb88f05cd25:-1:408f7fd9-ebfa-4c6c-9ed2-1c8337337c40" />
+  <param name="tokenId" value="tc_token_id:CID_42aa607598483217a970dfb88f05cd25:-1:8f8db2ac-0c97-4683-9245-a13d83a8224c" />
   <param name="url" value="https://github.com/ChubatovaTiger/GradleTests" />
   <param name="useAlternates" value="AUTO" />
   <param name="username" value="oauth2" />
