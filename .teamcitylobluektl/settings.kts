@@ -28,7 +28,7 @@ version = "2024.03"
 project {
 
     params {
-        param("gf", "nnn")
+        param("gf", "nnn00")
     }
 
     features {
