@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="8bfe0b2b-a969-4b79-b009-55ac21bc6baf" xsi:noNamespaceSchemaLocation="https://www.jetbrains.com/teamcity/schemas/2021.1/project-config.xsd">
+  <name>GHA</name>
+  <parameters>
+    <param name="gf" value="nnn" />
+  </parameters>
+  <project-extensions>
+    <extension id="PROJECT_EXT_2" type="OAuthProvider">
+      <parameters>
+        <param name="connectionSubtype" value="gitHubApp" />
+        <param name="displayName" value="TeamCity-gha2024072" />
+        <param name="gitHubApp.appId" value="1078554" />
+        <param name="gitHubApp.clientId" value="Iv23liLdGrQ9toXjC99F" />
+        <param name="gitHubApp.ownerUrl" value="https://github.com/ChubatovaTiger" />
+        <param name="providerType" value="GitHubApp" />
+        <param name="secure:gitHubApp.clientSecret" value="credentialsJSON:b2ce8425-5f45-476a-8642-d6e0c662a40d" />
+        <param name="secure:gitHubApp.privateKey" value="credentialsJSON:5cb62849-ab04-4c1f-820a-d7a1b31573fc" />
+        <param name="secure:gitHubApp.webhookSecret" value="credentialsJSON:5f81ca58-b208-4b77-ade9-53e851e06444" />
+        <param name="useUniqueRedirect" value="true" />
+      </parameters>
+    </extension>
+    <extension id="PROJECT_EXT_3" type="versionedSettings">
+      <parameters>
+        <param name="buildSettings" value="ALWAYS_USE_CURRENT" />
+        <param name="credentialsStorageType" value="credentialsJSON" />
+        <param name="enabled" value="true" />
+        <param name="ignoreChangesInDependenciesAndVcsSettings" value="false" />
+        <param name="rootId" value="Gha_M" />
+        <param name="settingsPath" value=".teamcityloblue" />
+        <param name="showChanges" value="false" />
+      </parameters>
+    </extension>
+  </project-extensions>
+  <cleanup />
+</project>
+

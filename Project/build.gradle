@@ -1,0 +1,44 @@
+plugins {
+    id("java")
+    //id("jvm-test-suite")
+    id("org.gradle.test-retry") version "1.2.0"
+    
+}
+
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation("junit:junit:4.13")
+}
+
+test {
+    useJUnit()
+    ignoreFailures = false
+    filter {
+    //excludeTestsMatching "*mytest*"
+ }
+    retry {
+        maxRetries = 0
+        maxFailures = 20
+        failOnPassedAfterRetry = false
+    }
+}
+
+task hello {
+    doLast {
+        println providers.systemProperty("teamcity.version").present
+        println(providers.systemProperty("teamcity.version").get())
+        //println project.ext["teamcity.build.branch"]
+    }
+}
+
+task upper(dependsOn: hello){
+    doLast {
+        String someString = 'mY_nAmE'
+        println "Original: " + someString
+        println "Upper case: " + someString.toUpperCase()
+    }
+}
