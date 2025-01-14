@@ -1,4 +1,5 @@
 import jetbrains.buildServer.configs.kotlin.*
+import jetbrains.buildServer.configs.kotlin.buildFeatures.approval
 
 /*
 The settings script is an entry point for defining a TeamCity
@@ -35,4 +36,12 @@ project {
 
 object F : BuildType({
     name = "fl"
+
+    features {
+        approval {
+            approvalRules = "user:user1"
+            timeout = 1
+            manualRunsApproved = false
+        }
+    }
 })
