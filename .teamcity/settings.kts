@@ -37,6 +37,10 @@ project {
 object F : BuildType({
     name = "fl"
 
+    vcs {
+        root(DslContext.settingsRoot)
+    }
+
     features {
         approval {
             approvalRules = "user:user1"
