@@ -1,7 +1,6 @@
 package patches.buildTypes
 
 import jetbrains.buildServer.configs.kotlin.*
-import jetbrains.buildServer.configs.kotlin.buildFeatures.approval
 import jetbrains.buildServer.configs.kotlin.ui.*
 
 /*
@@ -19,15 +18,5 @@ changeBuildType(RelativeId("Build1")) {
     vcs {
         add(RelativeId("A"))
         add(RelativeId("HttpsGithubComChubatovaTigerManytags"))
-    }
-
-    features {
-        add {
-            approval {
-                approvalRules = "user:user1"
-                timeout = 1
-                manualRunsApproved = false
-            }
-        }
     }
 }
