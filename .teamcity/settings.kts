@@ -37,10 +37,13 @@ object Build1 : BuildType({
         root(DslContext.settingsRoot)
     }
 
-    features {
+/*    features {
         approval {
             approvalRules = "user:user1"
             manualRunsApproved = false
+
         }
     }
+*/
+
 })
