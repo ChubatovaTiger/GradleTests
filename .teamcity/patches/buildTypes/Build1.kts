@@ -16,6 +16,10 @@ changeBuildType(RelativeId("Build1")) {
         }
     }
 
+    vcs {
+        add(RelativeId("A"))
+    }
+
     features {
         add {
             approval {
