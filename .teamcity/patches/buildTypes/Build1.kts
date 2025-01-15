@@ -18,6 +18,7 @@ changeBuildType(RelativeId("Build1")) {
 
     vcs {
         add(RelativeId("A"))
+        add(RelativeId("HttpsGithubComChubatovaTigerManytags"))
     }
 
     features {
