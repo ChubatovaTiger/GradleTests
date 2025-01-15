@@ -2,7 +2,6 @@ package patches.buildTypes
 
 import jetbrains.buildServer.configs.kotlin.*
 import jetbrains.buildServer.configs.kotlin.BuildType
-import jetbrains.buildServer.configs.kotlin.buildFeatures.approval
 import jetbrains.buildServer.configs.kotlin.ui.*
 
 /*
@@ -22,14 +21,6 @@ create(DslContext.projectId, BuildType({
         root(DslContext.settingsRoot)
         root(RelativeId("A"))
         root(RelativeId("HttpsGithubComChubatovaTigerManytags"))
-    }
-
-    features {
-        approval {
-            approvalRules = "user:user1"
-            timeout = 1
-            manualRunsApproved = false
-        }
     }
 }))
 
