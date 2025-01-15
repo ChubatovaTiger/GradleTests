@@ -1,5 +1,4 @@
 import jetbrains.buildServer.configs.kotlin.*
-import jetbrains.buildServer.configs.kotlin.buildFeatures.approval
 
 /*
 The settings script is an entry point for defining a TeamCity
@@ -35,12 +34,5 @@ object Build1 : BuildType({
 
     vcs {
         root(DslContext.settingsRoot)
-    }
-
-    features {
-        approval {
-            approvalRules = "user:user2"
-            timeout = 1
-        }
     }
 })
