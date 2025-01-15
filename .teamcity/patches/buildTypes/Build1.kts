@@ -30,4 +30,13 @@ changeBuildType(RelativeId("Build1")) {
             }
         }
     }
+
+    dependencies {
+        add(RelativeId("Build2")) {
+            snapshot {
+                reuseBuilds = ReuseBuilds.NO
+            }
+        }
+
+    }
 }
