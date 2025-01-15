@@ -14,6 +14,7 @@ create(DslContext.projectId, GitVcsRoot({
     name = "https://github.com/ChubatovaTiger/manytags"
     url = "https://github.com/ChubatovaTiger/manytags"
     branch = "refs/heads/12e"
+    branchSpec = "+:refs/tags/*"
     useTagsAsBranches = true
     authMethod = password {
         userName = "ChubatovaTiger"
