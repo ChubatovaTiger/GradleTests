@@ -33,6 +33,8 @@ project {
     buildType(Build2)
     buildType(Build1)
 
+    template(Tmpl1)
+
     features {
         hashiCorpVaultConnection {
             id = "hashicorpVaultConnection1"
@@ -47,37 +49,8 @@ project {
 }
 
 object Build1 : BuildType({
+    templates(Tmpl1)
     name = "build1"
-
-    artifactRules = "a.txt"
-
-    params {
-        password("pwd1", "credentialsJSON:f3eb63ea-5c2d-461a-abe9-bc1a9ac68968")
-        param("usual", "usualVal")
-        hashiCorpVaultParameter {
-            name = "k1"
-            query = "secrets/data/teamcity-qa/tc-qa-test-infrastructure!/tcSpaceServiceAccSshPubKey"
-            vaultId = "hashicorpVaultConnection1"
-        }
-    }
-
-    outputParams {
-        exposeAllParameters = false
-        param("k1", "%k1%")
-        param("output1", "outputval1")
-        param("usual", "%usual%")
-    }
-
-    vcs {
-        root(DslContext.settingsRoot)
-    }
-
-    steps {
-        script {
-            id = "simpleRunner"
-            scriptContent = "echo %k1% > a.txt"
-        }
-    }
 })
 
 object Build2 : BuildType({
@@ -119,6 +92,40 @@ object Build3 : BuildType({
     dependencies {
         snapshot(Build2) {
             reuseBuilds = ReuseBuilds.NO
+        }
+    }
+})
+
+object Tmpl1 : Template({
+    name = "tmpl1"
+
+    artifactRules = "a.txt"
+
+    params {
+        password("pwd1", "credentialsJSON:f3eb63ea-5c2d-461a-abe9-bc1a9ac68968")
+        param("usual", "usualVal")
+        hashiCorpVaultParameter {
+            name = "k1"
+            query = "secrets/data/teamcity-qa/tc-qa-test-infrastructure!/tcSpaceServiceAccSshPubKey"
+            vaultId = "hashicorpVaultConnection1"
+        }
+    }
+
+    outputParams {
+        exposeAllParameters = false
+        param("k1", "%k1%")
+        param("output1", "outputval1")
+        param("usual", "%usual%")
+    }
+
+    vcs {
+        root(DslContext.settingsRoot)
+    }
+
+    steps {
+        script {
+            id = "simpleRunner"
+            scriptContent = "echo %k1% > a.txt"
         }
     }
 })
