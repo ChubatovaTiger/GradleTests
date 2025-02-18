@@ -53,7 +53,7 @@ object Build1 : BuildType({
     name = "build1"
 
     outputParams {
-        param("usual1", "%usual1%")
+        param("usual1", "usuak1")
         param("usualtmpl", "%usualtmpl%")
     }
 })
