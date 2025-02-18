@@ -28,14 +28,14 @@ version = "2024.12"
 project {
 
     buildType(BuildB)
-    buildType(BuildA2)
+    buildType(BuildA23)
 }
 
-object BuildA2 : BuildType({
-    name = "buildA2"
+object BuildA23 : BuildType({
+    name = "buildA23"
 
     params {
-        param("par1", "12")
+        param("par1", "123")
     }
 
     outputParams {
@@ -58,12 +58,12 @@ object BuildB : BuildType({
     steps {
         script {
             id = "simpleRunner"
-            scriptContent = "echo ${BuildA2.depParamRefs["par1"]}"
+            scriptContent = "echo ${BuildA23.depParamRefs["par1"]}"
         }
     }
 
     dependencies {
-        snapshot(BuildA2) {
+        snapshot(BuildA23) {
             reuseBuilds = ReuseBuilds.NO
         }
     }
