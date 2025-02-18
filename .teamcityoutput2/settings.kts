@@ -51,6 +51,10 @@ project {
 object Build1 : BuildType({
     templates(Tmpl1)
     name = "build1"
+
+    outputParams {
+        param("usualtmpl", "%usualtmpl%")
+    }
 })
 
 object Build2 : BuildType({
