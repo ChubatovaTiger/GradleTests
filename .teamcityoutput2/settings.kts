@@ -61,8 +61,12 @@ object Build1 : BuildType({
 object Build2 : BuildType({
     name = "build2"
 
+    type = BuildTypeSettings.Type.COMPOSITE
+
     vcs {
         root(DslContext.settingsRoot)
+
+        showDependenciesChanges = true
     }
 
     steps {
