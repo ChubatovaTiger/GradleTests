@@ -39,7 +39,7 @@ object B1 : BuildType({
     }
 
     outputParams {
-        exposeAllParameters = false
+        exposeAllParameters = true
         param("par1", "%par1%")
     }
 
