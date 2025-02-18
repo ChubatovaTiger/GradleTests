@@ -64,7 +64,6 @@ object BuildB : BuildType({
 
     dependencies {
         snapshot(BuildA23) {
-            reuseBuilds = ReuseBuilds.NO
         }
     }
 })
