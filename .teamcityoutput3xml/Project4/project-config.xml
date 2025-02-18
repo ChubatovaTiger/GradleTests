@@ -4,6 +4,9 @@
   <parameters>
     <param name="cf" value="f" />
   </parameters>
+    <outputParameters>
+    <param name="cf" value="f" />
+  </outputParameters>
   <project-extensions>
     <extension id="PROJECT_EXT_1" type="versionedSettings">
       <parameters>
