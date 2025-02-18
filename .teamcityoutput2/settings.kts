@@ -86,8 +86,6 @@ object Build2 : BuildType({
 object Build3 : BuildType({
     name = "build3"
 
-    type = BuildTypeSettings.Type.COMPOSITE
-
     vcs {
         root(DslContext.settingsRoot)
 
