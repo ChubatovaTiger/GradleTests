@@ -10,7 +10,7 @@
       <param name="par1" value="1" />
     </parameters>
     <output-parameters>
-      <param name="par1" value="%par1%" />
+      <param name="par1" value="%par2%" />
     </output-parameters>
     <vcs-settings>
       <vcs-entry-ref root-id="Project4_S" />
