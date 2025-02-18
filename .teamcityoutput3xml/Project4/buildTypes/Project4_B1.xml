@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="" xsi:noNamespaceSchemaLocation="https://www.jetbrains.com/teamcity/schemas/2025.3/project-config.xsd">
+  <name>b1</name>
+  <description />
+  <settings>
+    <options>
+      <option name="exposeAllParametersAsOutput" value="false" />
+    </options>
+    <parameters>
+      <param name="par1" value="1" />
+    </parameters>
+    <output-parameters>
+      <param name="par1" value="%par1%" />
+    </output-parameters>
+    <vcs-settings>
+      <vcs-entry-ref root-id="Project4_S" />
+    </vcs-settings>
+  </settings>
+</build-type>
+
