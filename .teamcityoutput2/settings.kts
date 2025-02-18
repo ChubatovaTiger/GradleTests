@@ -103,6 +103,7 @@ object Tmpl1 : Template({
 
     params {
         password("pwd1", "credentialsJSON:f3eb63ea-5c2d-461a-abe9-bc1a9ac68968")
+        param("usualtmpl", "usualtmplvalue")
         param("usual", "usualVal")
         hashiCorpVaultParameter {
             name = "k1"
