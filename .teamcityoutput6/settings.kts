@@ -40,7 +40,7 @@ object BuildA23 : BuildType({
 
     outputParams {
         exposeAllParameters = false
-        param("par1", "%par1%")
+        param("par1", "blue")
     }
 
     vcs {
