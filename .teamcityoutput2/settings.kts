@@ -59,6 +59,7 @@ object Build1 : BuildType({
     name = "build1"
 
     outputParams {
+exposeAllParameters = true
         param("usual1", "usuak1")
         param("usualtmpl", "%usualtmpl%")
     }
