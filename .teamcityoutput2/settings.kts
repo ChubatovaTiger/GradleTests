@@ -68,8 +68,7 @@ object Build2 : BuildType({
     steps {
         script {
             id = "simpleRunner"
-            scriptContent = "echo ${Build1.depParamRefs["system.teamcity.buildConfName"]}"
-            dockerImage = "${Build1.depParamRefs.buildNumber}"
+            scriptContent = "echo ${Build1.depParamRefs["output1"]}"
         }
     }
 
