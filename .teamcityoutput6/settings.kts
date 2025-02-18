@@ -58,7 +58,7 @@ object BuildB : BuildType({
     steps {
         script {
             id = "simpleRunner"
-            scriptContent = "echo ${BuildA.depParamRefs["par1"]}"
+            scriptContent = "echo ${BuildA2.depParamRefs["par1"]}"
         }
     }
 
