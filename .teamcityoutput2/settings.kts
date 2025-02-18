@@ -65,7 +65,7 @@ object Build1 : BuildType({
         exposeAllParameters = false
         param("k1", "%k1%")
         param("output1", "outputval1")
-        param("usual", "%usual0%")
+        param("usual", "%usual%")
     }
 
     vcs {
