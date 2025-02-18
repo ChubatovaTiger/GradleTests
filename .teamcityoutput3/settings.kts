@@ -39,8 +39,9 @@ object B1 : BuildType({
     }
 
     outputParams {
-        exposeAllParameters = true
+        exposeAllParameters = false
         param("par1", "%par1%")
+param("par2", "val2")
     }
 
     vcs {
@@ -58,7 +59,7 @@ object B2 : BuildType({
     steps {
         script {
             id = "simpleRunner"
-            scriptContent = """echo "${B1.depParamRefs["teamcity.build.triggeredBy"]}""""
+            scriptContent = """echo "${B1.depParamRefs["par2"]}""""
         }
     }
 
