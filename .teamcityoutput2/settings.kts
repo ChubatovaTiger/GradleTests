@@ -52,8 +52,8 @@ object Build1 : BuildType({
     artifactRules = "a.txt"
 
     params {
-        param("usual", "usualVal")
         password("pwd1", "credentialsJSON:f3eb63ea-5c2d-461a-abe9-bc1a9ac68968")
+        param("usual", "usualVal")
         hashiCorpVaultParameter {
             name = "k1"
             query = "secrets/data/teamcity-qa/tc-qa-test-infrastructure!/tcSpaceServiceAccSshPubKey"
