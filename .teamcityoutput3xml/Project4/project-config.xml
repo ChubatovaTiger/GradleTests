@@ -12,6 +12,9 @@
         <param name="settingsPath" value=".teamcityoutput3xml" />
         <param name="showChanges" value="false" />
       </parameters>
+      <output-parameters>
+      <param name="par10" value="par10v" />
+    </output-parameters>
     </extension>
   </project-extensions>
 </project>
