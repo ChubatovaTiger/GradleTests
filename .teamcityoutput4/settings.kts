@@ -28,7 +28,7 @@ version = "2024.12"
 project {
 
     buildType(B2)
-    buildType(B1)
+    buildType(B1a)
 
     params {
         param("cf", "f")
