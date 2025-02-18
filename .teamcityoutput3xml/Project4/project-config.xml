@@ -15,8 +15,6 @@
 
     </extension>
   </project-extensions>
-        <output-parameters>
-      <param name="par10" value="par10v" />
-    </output-parameters>
+
 </project>
 
