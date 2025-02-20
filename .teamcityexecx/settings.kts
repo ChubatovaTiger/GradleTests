@@ -30,6 +30,16 @@ project {
 
     buildType(B1)
     buildType(B2)
+
+    cleanup {
+        keepRule {
+            id = "KEEP_RULE_1"
+            keepAtLeast = allBuilds()
+            dataToKeep = everything()
+            applyPerEachBranch = true
+            preserveArtifactsDependencies = true
+        }
+    }
 }
 
 object B1 : BuildType({
