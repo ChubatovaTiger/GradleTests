@@ -33,6 +33,7 @@ project {
     buildType(Build3)
     buildType(Build2)
 
+    template(TmplPR)
     template(Ffftmpl)
 
     params {
@@ -76,6 +77,7 @@ object Build1 : BuildType({
 
     outputParams {
         param("chkboxtmpl", "%chkboxtmpl%")
+        param("env.AWS_ACCESS_KEY_ID", "%env.AWS_ACCESS_KEY_ID%")
         param("multiline", "%multiline%")
         param("multilineOwn", "%multilinePwd%")
         param("par16", "jaj")
@@ -130,7 +132,7 @@ object Build3 : BuildType({
             id = "simpleRunner"
             scriptContent = """
                 echo ${Build1.depParamRefs.buildNumber}
-                echo ${Build1.depParamRefs["teamcity.build.id"]}
+                echo ${Build1.depParamRefs["env.AWS_ACCESS_KEY_ID"]}
             """.trimIndent()
             param("org.jfrog.artifactory.selectedDeployableServer.downloadSpecSource", "Job configuration")
             param("org.jfrog.artifactory.selectedDeployableServer.useSpecs", "false")
@@ -201,5 +203,13 @@ object Ffftmpl : Template({
             param("org.jfrog.artifactory.selectedDeployableServer.urlId", "0")
             param("org.jfrog.artifactory.selectedDeployableServer.dockerImageName", "g")
         }
+    }
+})
+
+object TmplPR : Template({
+    name = "tmplPR"
+
+    vcs {
+        root(DslContext.settingsRoot)
     }
 })
