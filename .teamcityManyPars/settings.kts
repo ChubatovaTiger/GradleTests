@@ -44,6 +44,10 @@ object Build1 : BuildType({
     name = "build1"
 
     params {
+        param("kk", """
+            k
+            kl
+        """.trimIndent())
         param("par20", "2")
         password("pedpartmpl0", "credentialsJSON:132d34fb-2bbb-4c67-8edc-ea70dc93595b")
         param("usualtmpl4", "ddd")
