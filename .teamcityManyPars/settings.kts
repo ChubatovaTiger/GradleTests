@@ -42,33 +42,36 @@ project {
 object Build1 : BuildType({
     templates(Ffftmpl)
     name = "build1"
-   params {
-        param("pp0", "%pwdpar1%")
-        param("usualtmpl0", "ddd")
-        param("par10", "1")
-        password("pedpartmpl0", "credentialsJSON:132d34fb-2bbb-4c67-8edc-ea70dc93595b")
+
+    params {
         param("par20", "2")
-        param("pp1", "%pwdpar1%")
-        param("usualtmpl1", "ddd")
-        param("par11", "1")
-        param("pp2", "%pwdpar1%")
-        param("usualtmpl2", "ddd")
-        param("par12", "1")
-        param("pp3", "%pwdpar1%")
-        param("usualtmpl3", "ddd")
-        param("par13", "1")
-        param("pp4", "%pwdpar1%")
+        password("pedpartmpl0", "credentialsJSON:132d34fb-2bbb-4c67-8edc-ea70dc93595b")
         param("usualtmpl4", "ddd")
-        param("par14", "1")
-        param("pp5", "%pwdpar1%")
-        param("usualtmpl5", "ddd")
-        param("par15", "1")
-        param("pp6", "%pwdpar1%")
+        param("usualtmpl3", "ddd")
         param("usualtmpl6", "ddd")
+        param("usualtmpl5", "ddd")
+        param("usualtmpl0", "ddd")
+        param("usualtmpl2", "ddd")
+        param("usualtmpl1", "ddd")
+        param("pp1", "%pwdpar1%")
+        param("pp0", "%pwdpar1%")
+        param("pp3", "%pwdpar1%")
+        param("pp2", "%pwdpar1%")
+        param("pp5", "%pwdpar1%")
+        param("pp4", "%pwdpar1%")
+        param("pp6", "%pwdpar1%")
+        param("par10", "1")
+        param("par11", "1")
+        param("par12", "1")
+        param("par13", "1")
+        param("par14", "1")
+        param("par15", "1")
         param("par16", "1")
     }
+
     outputParams {
         param("chkboxtmpl", "%chkboxtmpl%")
+        param("pp3", "%pp3%")
     }
     
     disableSettings("ArtifactoryDocker")
@@ -147,9 +150,9 @@ object Ffftmpl : Template({
         param("usualtmpl", "ddd")
         param("par1", "1")
         password("pedpartmpl", "credentialsJSON:132d34fb-2bbb-4c67-8edc-ea70dc93595b")
-        param("par2", "2")
         checkbox("chkboxtmpl", "true",
                   checked = "true", unchecked = "false")
+        param("par2", "2")
     }
 
     outputParams {
