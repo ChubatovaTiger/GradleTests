@@ -114,7 +114,7 @@ object Build2 : BuildType({
 object Build3 : BuildType({
     name = "build3"
 
-    buildNumberPattern = "%build.counter%-${Build1.depParamRefs["chkboxtmpl"]}"
+    buildNumberPattern = "%build.counter%-${Build1.depParamRefs["teamcity.build.id"]}"
 
     params {
         param("gg", "${Build1.depParamRefs["par1"]}")
