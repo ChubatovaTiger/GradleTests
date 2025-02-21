@@ -72,6 +72,7 @@ object Build1 : BuildType({
     outputParams {
         param("chkboxtmpl", "%chkboxtmpl%")
         param("pp3", "%pp3%")
+        param("pp5", "%pp5%")
     }
     
     disableSettings("ArtifactoryDocker")
