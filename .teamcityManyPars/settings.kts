@@ -99,6 +99,8 @@ object Build2 : BuildType({
     outputParams {
         exposeAllParameters = false
         param("bu", "${Build1.depParamRefs["par1"]}")
+            param("tpl1", "%tpl1%")
+
     }
 
     vcs {
