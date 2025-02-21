@@ -72,6 +72,10 @@ object Build1 : BuildType({
     outputParams {
         param("chkboxtmpl", "%chkboxtmpl%")
         param("par16", "jaj")
+        param("par20", """
+            %par20%
+            kjkj
+        """.trimIndent())
         param("par2000000", "nbvnbvnbv")
         param("pp3", "%pp3%")
         param("pp5", "%pp5%")
