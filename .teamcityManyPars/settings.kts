@@ -168,6 +168,7 @@ object Ffftmpl : Template({
             multiline
             value
         """.trimIndent())
+        password("multilinePwd", "credentialsJSON:b00d5dfc-ad4b-481d-b231-6feabd0e8693")
     }
 
     outputParams {
