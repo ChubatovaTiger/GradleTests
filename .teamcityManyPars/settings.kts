@@ -164,6 +164,10 @@ object Ffftmpl : Template({
         checkbox("chkboxtmpl", "true",
                   checked = "true", unchecked = "false")
         param("par2", "2")
+        param("multiline", """
+            multiline
+            value
+        """.trimIndent())
     }
 
     outputParams {
