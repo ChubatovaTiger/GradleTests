@@ -157,7 +157,7 @@ object Build3 : BuildType({
     features {
         matrix {
             param("sdf", listOf(
-                value("%depdep.Project4_Build1.build.number%")
+                value("%dep.Project4_Build1.build.number%")
             ))
         }
     }
