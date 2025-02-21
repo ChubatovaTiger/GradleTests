@@ -75,6 +75,7 @@ object Build1 : BuildType({
 
     outputParams {
         param("chkboxtmpl", "%chkboxtmpl%")
+        param("multiline", "%multiline%")
         param("par16", "jaj")
         param("par20", """
             %par20%
