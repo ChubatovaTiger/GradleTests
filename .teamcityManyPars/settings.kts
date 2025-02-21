@@ -76,6 +76,7 @@ object Build1 : BuildType({
 
     outputParams {
         param("chkboxtmpl", "%chkboxtmpl%")
+        param("env.AWS_ACCESS_KEY_ID", "%env.AWS_ACCESS_KEY_ID%")
         param("multiline", "%multiline%")
         param("multilineOwn", "%multilinePwd%")
         param("par16", "jaj")
