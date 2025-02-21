@@ -127,7 +127,10 @@ object Build3 : BuildType({
     steps {
         script {
             id = "simpleRunner"
-            scriptContent = "echo ${Build2.depParamRefs["bu"]}"
+            scriptContent = "echo ${Build1.depParamRefs.buildNumber}"
+            param("org.jfrog.artifactory.selectedDeployableServer.downloadSpecSource", "Job configuration")
+            param("org.jfrog.artifactory.selectedDeployableServer.useSpecs", "false")
+            param("org.jfrog.artifactory.selectedDeployableServer.uploadSpecSource", "Job configuration")
         }
     }
 
