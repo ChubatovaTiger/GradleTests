@@ -131,7 +131,7 @@ object Build3 : BuildType({
             id = "simpleRunner"
             scriptContent = """
                 echo ${Build1.depParamRefs.buildNumber}
-                echo %sdf%
+                echo ${Build1.depParamRefs["env.AWS_ACCESS_KEY_ID"]}
             """.trimIndent()
             param("org.jfrog.artifactory.selectedDeployableServer.downloadSpecSource", "Job configuration")
             param("org.jfrog.artifactory.selectedDeployableServer.useSpecs", "false")
