@@ -114,7 +114,6 @@ object Build2 : BuildType({
 object Build3 : BuildType({
     name = "build3"
 
-    type = BuildTypeSettings.Type.COMPOSITE
     buildNumberPattern = "%build.counter%-${Build1.depParamRefs["chkboxtmpl"]}"
 
     params {
