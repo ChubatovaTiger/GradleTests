@@ -33,6 +33,7 @@ project {
     buildType(Build3)
     buildType(Build2)
 
+    template(TmplPR)
     template(Ffftmpl)
 
     params {
@@ -203,4 +204,8 @@ object Ffftmpl : Template({
             param("org.jfrog.artifactory.selectedDeployableServer.dockerImageName", "g")
         }
     }
+})
+
+object TmplPR : Template({
+    name = "tmplPR"
 })
