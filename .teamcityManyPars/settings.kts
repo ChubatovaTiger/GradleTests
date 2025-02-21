@@ -1,5 +1,6 @@
 import jetbrains.buildServer.configs.kotlin.*
 import jetbrains.buildServer.configs.kotlin.buildSteps.script
+import jetbrains.buildServer.configs.kotlin.matrix
 import jetbrains.buildServer.configs.kotlin.triggers.schedule
 
 /*
@@ -129,7 +130,7 @@ object Build3 : BuildType({
             id = "simpleRunner"
             scriptContent = """
                 echo ${Build1.depParamRefs.buildNumber}
-                echo ${Build1.depParamRefs["teamcity.build.id"]}
+                echo %sdf%
             """.trimIndent()
             param("org.jfrog.artifactory.selectedDeployableServer.downloadSpecSource", "Job configuration")
             param("org.jfrog.artifactory.selectedDeployableServer.useSpecs", "false")
@@ -150,6 +151,14 @@ object Build3 : BuildType({
             buildParams {
                 param("ass", "${Build1.depParamRefs["par2"]}")
             }
+        }
+    }
+
+    features {
+        matrix {
+            param("sdf", listOf(
+                value("%dep.Project4_Build1.build.number%")
+            ))
         }
     }
 
