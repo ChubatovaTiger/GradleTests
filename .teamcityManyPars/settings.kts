@@ -130,7 +130,6 @@ object Build3 : BuildType({
             scriptContent = """
                 echo ${Build1.depParamRefs.buildNumber}
                 echo ${Build1.depParamRefs["teamcity.build.id"]}
-                echo ${Build1.depParamRefs["branch"]}
             """.trimIndent()
             param("org.jfrog.artifactory.selectedDeployableServer.downloadSpecSource", "Job configuration")
             param("org.jfrog.artifactory.selectedDeployableServer.useSpecs", "false")
