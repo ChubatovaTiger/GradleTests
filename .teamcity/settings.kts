@@ -13,7 +13,7 @@ project {
 
 
     val numProjects=2
-    val numConfigurationsPerProject=40
+    val numConfigurationsPerProject=4
 
 
     for (i in 0..numProjects) {
