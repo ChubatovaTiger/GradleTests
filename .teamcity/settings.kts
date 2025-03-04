@@ -1,15 +1,15 @@
-import jetbrains.buildServer.configs.kotlin.v2019_2.*
+import jetbrains.buildServer.configs.kotlin.*
 
-import jetbrains.buildServer.configs.kotlin.v2019_2.buildFeatures.PullRequests
-import jetbrains.buildServer.configs.kotlin.v2019_2.buildFeatures.pullRequests
-import jetbrains.buildServer.configs.kotlin.v2019_2.vcs.GitVcsRoot
-import jetbrains.buildServer.configs.kotlin.v2019_2.triggers.vcs
+import jetbrains.buildServer.configs.kotlin.buildFeatures.PullRequests
+import jetbrains.buildServer.configs.kotlin.buildFeatures.pullRequests
+import jetbrains.buildServer.configs.kotlin.vcs.GitVcsRoot
+import jetbrains.buildServer.configs.kotlin.triggers.vcs
 
 version = "2021.2"
 
 project {
 
-    vcsRoot(HttpsGithubComGradleGradleGit)
+
 
 
     val numProjects=2
@@ -26,9 +26,7 @@ project {
                     id("subProj_bt_$i" + "_$j")
                     name = "bt $i $j"
                     
-    vcs {
-        root(HttpsGithubComGradleGradleGit)
-    }
+
 
                 }
             }
@@ -37,11 +35,7 @@ project {
 }
 
 
-object HttpsGithubComGradleGradleGit : GitVcsRoot({
-    name = "https://github.com/ChubatovaTiger/ChubatovaGradleTestsBackup"
-    url = "https://github.com/ChubatovaTiger/ChubatovaGradleTestsBackup"
-    branch = "refs/heads/master"
-})
+
 
 
 
