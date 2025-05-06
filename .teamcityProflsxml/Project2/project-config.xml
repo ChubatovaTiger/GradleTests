@@ -52,7 +52,7 @@
     </extension>
     <extension id="PROJECT_EXT_9" type="CloudImage">
       <parameters>
-        <param name="agent_pool_id" value="-2" />
+        <param name="agent_pool_id" value="12" />
         <param name="amazon-id" value="ami-0b55e6eb21b887f36" />
         <param name="ebs-optimized" value="false" />
         <param name="image-name-prefix" value="p2im2" />
