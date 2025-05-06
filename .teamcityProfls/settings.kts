@@ -59,7 +59,7 @@ project {
         amazonEC2CloudImage {
             id = "PROJECT_EXT_8"
             profileId = "amazon-3"
-            agentPoolId = "-2"
+            //agentPoolId = "-2"
             name = "p2im1"
             vpcSubnetId = "subnet-0ace2a91ee63119ea"
             instanceType = "t3.medium"
@@ -69,7 +69,7 @@ project {
         amazonEC2CloudImage {
             id = "PROJECT_EXT_9"
             profileId = "amazon-4"
-            agentPoolId = "3"
+            agentPoolId = "12"
             name = "p2im2"
             vpcSubnetId = "subnet-0ace2a91ee63119ea"
             instanceType = "t3.medium"
