@@ -1,30 +1,13 @@
 import jetbrains.buildServer.configs.kotlin.*
+import jetbrains.buildServer.configs.kotlin.buildSteps.powerShell
 import jetbrains.buildServer.configs.kotlin.buildSteps.script
+import jetbrains.buildServer.configs.kotlin.failureConditions.BuildFailureOnMetric
 import jetbrains.buildServer.configs.kotlin.failureConditions.BuildFailureOnText
+import jetbrains.buildServer.configs.kotlin.failureConditions.failOnMetricChange
 import jetbrains.buildServer.configs.kotlin.failureConditions.failOnText
 import jetbrains.buildServer.configs.kotlin.matrix
 
-/*
-The settings script is an entry point for defining a TeamCity
-project hierarchy. The script should contain a single call to the
-project() function with a Project instance or an init function as
-an argument.
 
-VcsRoots, BuildTypes, Templates, and subprojects can be
-registered inside the project using the vcsRoot(), buildType(),
-template(), and subProject() methods respectively.
-
-To debug settings scripts in command-line, run the
-
-    mvnDebug org.jetbrains.teamcity:teamcity-configs-maven-plugin:generate
-
-command and attach your debugger to the port 8000.
-
-To debug in IntelliJ Idea, open the 'Maven Projects' tool window (View
--> Tool Windows -> Maven Projects), find the generate task node
-(Plugins -> teamcity-configs -> teamcity-configs:generate), the
-'Debug' option is available in the context menu for the task.
-*/
 
 version = "2025.03"
 
@@ -34,33 +17,55 @@ project {
 }
 
 object Build200 : BuildType({
-    name = "build200"
+     name = "Matrix with failure condition2"
+
+    params {
+        param("limit", "5")
+    }
 
     steps {
         script {
             id = "simpleRunner"
-            scriptContent = """echo "bu""""
+            scriptContent = "echo fluffy %animal%"
+        }
+        powerShell {
+            id = "jetbrains_powershell"
+            scriptMode = script {
+                content = "Sleep %sleep%"
+            }
         }
     }
 
     failureConditions {
-        executionTimeoutMin = 1
         failOnText {
             conditionType = BuildFailureOnText.ConditionType.CONTAINS
-            pattern = "bu"
-            failureMessage = "buhere"
+            pattern = "turtle"
+            failureMessage = "Turtles are not fluffy"
             reverse = false
             stopBuildOnFailure = true
+        }
+        failOnMetricChange {
+            metric = BuildFailureOnMetric.MetricType.BUILD_DURATION
+            units = BuildFailureOnMetric.MetricUnit.DEFAULT_UNIT
+            comparison = BuildFailureOnMetric.MetricComparison.MORE
+            compareTo = value()
+            stopBuildOnFailure = true
+            param("metricThreshold", "%limit%")
         }
     }
 
     features {
         matrix {
-            param("a", listOf(
-                value("1"),
-                value("2")
+            param("animal", listOf(
+                value("cat"),
+                value("dog"),
+                value("bunny"),
+                value("turtle")
             ))
-            param("separateArtifacts", "true")
+            param("sleep", listOf(
+                value("0"),
+                value("6")
+            ))
         }
     }
 })
