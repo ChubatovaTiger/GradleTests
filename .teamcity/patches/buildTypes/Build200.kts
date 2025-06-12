@@ -31,6 +31,12 @@ changeBuildType(RelativeId("Build200")) {
             enabled = false
             clearConditions()
         }
+        insert(2) {
+            script {
+                id = "simpleRunner_1"
+                scriptContent = "sleep 5"
+            }
+        }
     }
 
     failureConditions {
