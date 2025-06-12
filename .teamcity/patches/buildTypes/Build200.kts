@@ -65,7 +65,6 @@ changeBuildType(RelativeId("Build200")) {
             }
         }
         feature2.apply {
-            enabled = false
             threshold = 5
             stopBuildOnFailure = false
         }
