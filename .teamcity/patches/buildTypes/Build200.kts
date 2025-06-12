@@ -34,7 +34,7 @@ changeBuildType(RelativeId("Build200")) {
         insert(2) {
             script {
                 id = "simpleRunner_1"
-                scriptContent = "sleep 5"
+                scriptContent = "sleep %sleep%"
             }
         }
     }
