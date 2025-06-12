@@ -5,7 +5,9 @@ import jetbrains.buildServer.configs.kotlin.buildSteps.PowerShellStep
 import jetbrains.buildServer.configs.kotlin.buildSteps.powerShell
 import jetbrains.buildServer.configs.kotlin.buildSteps.script
 import jetbrains.buildServer.configs.kotlin.failureConditions.BuildFailureOnMetric
+import jetbrains.buildServer.configs.kotlin.failureConditions.BuildFailureOnText
 import jetbrains.buildServer.configs.kotlin.failureConditions.failOnMetricChange
+import jetbrains.buildServer.configs.kotlin.failureConditions.failOnText
 import jetbrains.buildServer.configs.kotlin.ui.*
 
 /*
@@ -40,7 +42,19 @@ changeBuildType(RelativeId("Build200")) {
     }
 
     failureConditions {
-        val feature1 = find<BuildFailureOnMetric> {
+        val feature1 = find<BuildFailureOnText> {
+            failOnText {
+                conditionType = BuildFailureOnText.ConditionType.CONTAINS
+                pattern = "turtle"
+                failureMessage = "Turtles are not fluffy"
+                reverse = false
+                stopBuildOnFailure = true
+            }
+        }
+        feature1.apply {
+            enabled = false
+        }
+        val feature2 = find<BuildFailureOnMetric> {
             failOnMetricChange {
                 metric = BuildFailureOnMetric.MetricType.BUILD_DURATION
                 units = BuildFailureOnMetric.MetricUnit.DEFAULT_UNIT
@@ -50,7 +64,7 @@ changeBuildType(RelativeId("Build200")) {
                 param("metricThreshold", "%limit%")
             }
         }
-        feature1.apply {
+        feature2.apply {
             enabled = false
             threshold = 5
             stopBuildOnFailure = false
