@@ -1,6 +1,9 @@
 package patches.buildTypes
 
 import jetbrains.buildServer.configs.kotlin.*
+import jetbrains.buildServer.configs.kotlin.buildSteps.PowerShellStep
+import jetbrains.buildServer.configs.kotlin.buildSteps.powerShell
+import jetbrains.buildServer.configs.kotlin.buildSteps.script
 import jetbrains.buildServer.configs.kotlin.failureConditions.BuildFailureOnMetric
 import jetbrains.buildServer.configs.kotlin.failureConditions.failOnMetricChange
 import jetbrains.buildServer.configs.kotlin.ui.*
@@ -11,6 +14,25 @@ To apply the patch, change the buildType with id = 'Build200'
 accordingly, and delete the patch script.
 */
 changeBuildType(RelativeId("Build200")) {
+    expectSteps {
+        script {
+            id = "simpleRunner"
+            scriptContent = "echo fluffy %animal%"
+        }
+        powerShell {
+            id = "jetbrains_powershell"
+            scriptMode = script {
+                content = "Sleep %sleep%"
+            }
+        }
+    }
+    steps {
+        update<PowerShellStep>(1) {
+            enabled = false
+            clearConditions()
+        }
+    }
+
     failureConditions {
         val feature1 = find<BuildFailureOnMetric> {
             failOnMetricChange {
