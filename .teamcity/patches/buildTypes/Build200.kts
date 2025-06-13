@@ -16,6 +16,11 @@ To apply the patch, change the buildType with id = 'Build200'
 accordingly, and delete the patch script.
 */
 changeBuildType(RelativeId("Build200")) {
+    check(paused == false) {
+        "Unexpected paused: '$paused'"
+    }
+    paused = true
+
     expectSteps {
         script {
             id = "simpleRunner"
