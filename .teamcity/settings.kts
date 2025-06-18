@@ -75,8 +75,8 @@ object Build1 : BuildType({
 object HttpsGithubComChubatovaTigerGradleTests_2 : GitVcsRoot({
     name = "parametrized"
     url = "https://github.com/ChubatovaTiger/GradleTests"
-    branch = "refs/heads/master"
-    branchSpec = "refs/heads/(*)"
+    branch = "%roadrunner.default.branch%"
+    branchSpec = "%roadrunner.branch.spec%"
     authMethod = password {
         userName = "ChubatovaTiger"
         password = "credentialsJSON:8a89a428-4e80-4101-a4ae-396083bc3fc6"
