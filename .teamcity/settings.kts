@@ -43,7 +43,7 @@ object Build1 : BuildType({
 
 object HttpsGithubComChubatovaTigerGradleTests_2 : GitVcsRoot({
     name = "https://github.com/ChubatovaTiger/GradleTests"
-    url = "https://github.com/ChubatovaTiger/GradleTests"
+    url = "parametrized"
     branch = "refs/heads/master"
     authMethod = password {
         userName = "ChubatovaTiger"
