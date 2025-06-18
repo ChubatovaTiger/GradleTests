@@ -32,6 +32,10 @@ project {
     vcsRoot(HttpsGithubComChubatovaTigerGradleTests_2)
 
     buildType(Build1)
+
+    params {
+        param("roadrunner.default.branch", "refs/heads/master")
+    }
 }
 
 object Build1 : BuildType({
