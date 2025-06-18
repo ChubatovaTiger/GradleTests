@@ -42,7 +42,6 @@ object Build1 : BuildType({
     }
 
     vcs {
-        root(DslContext.settingsRoot)
         root(HttpsGithubComChubatovaTigerGradleTests_2)
 
         checkoutMode = CheckoutMode.MANUAL
