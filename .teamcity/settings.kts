@@ -1,4 +1,5 @@
 import jetbrains.buildServer.configs.kotlin.*
+import jetbrains.buildServer.configs.kotlin.vcs.GitVcsRoot
 
 /*
 The settings script is an entry point for defining a TeamCity
@@ -26,6 +27,8 @@ version = "2023.11"
 
 project {
 
+    vcsRoot(HttpsGithubComChubatovaTigerGradleTests_2)
+
     buildType(Build1)
 }
 
@@ -34,5 +37,16 @@ object Build1 : BuildType({
 
     vcs {
         root(DslContext.settingsRoot)
+        root(HttpsGithubComChubatovaTigerGradleTests_2)
+    }
+})
+
+object HttpsGithubComChubatovaTigerGradleTests_2 : GitVcsRoot({
+    name = "https://github.com/ChubatovaTiger/GradleTests"
+    url = "https://github.com/ChubatovaTiger/GradleTests"
+    branch = "refs/heads/master"
+    authMethod = password {
+        userName = "ChubatovaTiger"
+        password = "credentialsJSON:d338090a-aa0d-456a-b09a-3f702983670d"
     }
 })
