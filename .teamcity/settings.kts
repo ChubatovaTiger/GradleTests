@@ -35,6 +35,7 @@ project {
 
     params {
         param("roadrunner.default.branch", "refs/heads/master")
+        param("roadrunner.branch.spec", "+:refs/heads/(reviews/*)")
     }
 }
 
