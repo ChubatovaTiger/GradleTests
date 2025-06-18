@@ -63,7 +63,6 @@ object Build1 : BuildType({
     triggers {
         vcs {
             branchFilter = ""
-            perCheckinTriggering = true
             enableQueueOptimization = false
         }
     }
