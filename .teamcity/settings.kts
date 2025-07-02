@@ -44,4 +44,9 @@ object Build1 : BuildType({
     vcs {
         root(DslContext.settingsRoot)
     }
+
+    dependencies {
+        snapshot(B) {
+        }
+    }
 })
