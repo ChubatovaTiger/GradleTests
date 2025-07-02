@@ -1,7 +1,6 @@
 package Project1.buildTypes
 
 import jetbrains.buildServer.configs.kotlin.v2019_2.*
-import jetbrains.buildServer.configs.kotlin.v2019_2.buildFeatures.freeDiskSpace
 import jetbrains.buildServer.configs.kotlin.v2019_2.buildSteps.ant
 import jetbrains.buildServer.configs.kotlin.v2019_2.buildSteps.script
 
@@ -18,12 +17,6 @@ object Project1_Build1 : BuildType({
             id = "Ant"
             mode = antFile {
             }
-        }
-    }
-
-    features {
-        freeDiskSpace {
-            failBuild = false
         }
     }
 
