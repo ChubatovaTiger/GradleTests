@@ -15,6 +15,7 @@ object Project : Project({
     name = "project1"
 
     vcsRoot(Project1_HttpsGithubComChubatovaTigerGradleTests)
+    vcsRoot(Project1_HttpsGithubComChubatovaTigerRepo)
 
     buildType(Project1_Build1)
 
@@ -24,9 +25,10 @@ object Project : Project({
             mode = VersionedSettings.Mode.ENABLED
             buildSettingsMode = VersionedSettings.BuildSettingsMode.USE_CURRENT_SETTINGS
             rootExtId = "${Project1_HttpsGithubComChubatovaTigerGradleTests.id}"
-            showChanges = false
+            showChanges = true
             settingsFormat = VersionedSettings.Format.KOTLIN
             storeSecureParamsOutsideOfVcs = true
+            allowEditingOfProjectSettings = true
         }
     }
 })
