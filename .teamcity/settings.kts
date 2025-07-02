@@ -32,6 +32,10 @@ project {
 
 object B : BuildType({
     name = "b"
+
+    vcs {
+        root(DslContext.settingsRoot)
+    }
 })
 
 object Build1 : BuildType({
