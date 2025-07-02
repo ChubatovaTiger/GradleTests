@@ -9,10 +9,6 @@ object Project1_Build1 : BuildType({
     uuid = "9ef5aa98-9ff7-4dcf-8759-8c8b3fce64e7"
     name = "build1"
 
-    params {
-        password("remote.cache.upload.token", "credentialsJSON:3e8c2bb6-e485-48a8-8cf0-98923243e5fe")
-    }
-
     steps {
         script {
             id = "simpleRunner"
