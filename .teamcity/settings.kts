@@ -27,7 +27,12 @@ version = "2025.03"
 project {
 
     buildType(Build1)
+    buildType(B)
 }
+
+object B : BuildType({
+    name = "b"
+})
 
 object Build1 : BuildType({
     name = "build1"
