@@ -20,6 +20,7 @@ object Project : Project({
     buildType(Project1_Build1)
 
     params {
+        param("a", "a")
         password("b", "credentialsJSON:1abd7053-681e-4095-89d2-033875b16a5e")
     }
 
