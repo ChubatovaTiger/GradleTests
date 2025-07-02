@@ -13,10 +13,6 @@ object Project1_Build1 : BuildType({
         password("remote.cache.upload.token", "credentialsJSON:3e8c2bb6-e485-48a8-8cf0-98923243e5fe")
     }
 
-    vcs {
-        root(Project1.vcsRoots.Project1_HttpsGithubComChubatovaTigerRepo)
-    }
-
     steps {
         script {
             id = "simpleRunner"
