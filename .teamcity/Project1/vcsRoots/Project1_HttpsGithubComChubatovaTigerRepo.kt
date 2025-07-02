@@ -8,4 +8,5 @@ object Project1_HttpsGithubComChubatovaTigerRepo : GitVcsRoot({
     name = "https://github.com/ChubatovaTiger/repo"
     url = "https://github.com/ChubatovaTiger/repo"
     branch = "refs/heads/main"
+    param("useAlternates", "true")
 })

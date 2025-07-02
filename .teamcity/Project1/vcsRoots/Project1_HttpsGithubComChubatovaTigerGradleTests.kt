@@ -12,4 +12,5 @@ object Project1_HttpsGithubComChubatovaTigerGradleTests : GitVcsRoot({
         userName = "ChubatovaTiger"
         password = "credentialsJSON:1d245fc8-7918-4ae4-a0d6-8f3d2acfb5db"
     }
+    param("useAlternates", "true")
 })
