@@ -2,6 +2,7 @@ package Project1.buildTypes
 
 import jetbrains.buildServer.configs.kotlin.v2019_2.*
 import jetbrains.buildServer.configs.kotlin.v2019_2.buildFeatures.freeDiskSpace
+import jetbrains.buildServer.configs.kotlin.v2019_2.buildSteps.script
 
 object Project1_Build1 : BuildType({
     uuid = "9ef5aa98-9ff7-4dcf-8759-8c8b3fce64e7"
@@ -9,6 +10,13 @@ object Project1_Build1 : BuildType({
 
     vcs {
         root(Project1.vcsRoots.Project1_HttpsGithubComChubatovaTigerRepo)
+    }
+
+    steps {
+        script {
+            id = "simpleRunner"
+            scriptContent = "echo a"
+        }
     }
 
     features {
