@@ -30,4 +30,8 @@ object Project1_Build1 : BuildType({
             failBuild = false
         }
     }
+
+    requirements {
+        noLessThan("teamcity.agent.hardware.cpuCount", "8")
+    }
 })
