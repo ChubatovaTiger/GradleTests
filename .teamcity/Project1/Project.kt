@@ -19,10 +19,6 @@ object Project : Project({
 
     buildType(Project1_Build1)
 
-    params {
-        param("a", "a")
-    }
-
     features {
         versionedSettings {
             id = "PROJECT_EXT_2"
