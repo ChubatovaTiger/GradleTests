@@ -51,4 +51,10 @@ object Project31_Buil31 : BuildType({
 
 object Project31_Project32 : Project({
     name = "project32"
+
+    buildType(Project31_Project32_Build32)
+})
+
+object Project31_Project32_Build32 : BuildType({
+    name = "build32"
 })
