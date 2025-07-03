@@ -40,8 +40,15 @@ object Project31 : Project({
     name = "project31"
 
     buildType(Project31_Buil31)
+
+    subProject(Project31_Project32)
 })
 
 object Project31_Buil31 : BuildType({
     name = "buil31"
+})
+
+
+object Project31_Project32 : Project({
+    name = "project32"
 })
