@@ -32,4 +32,8 @@ project {
 
 object Subproj1 : Project({
     name = "subproj1"
+
+    params {
+        param("sdf", "sdf")
+    }
 })
