@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="ac2369b5-baa7-4306-9b86-422827f84420" xsi:noNamespaceSchemaLocation="https://www.jetbrains.com/teamcity/schemas/2025.3/project-config.xsd">
+  <name>build3</name>
+  <description />
+  <settings>
+    <options>
+      <option name="artifactRules" value="a.txt" />
+    </options>
+    <build-runners>
+      <runner id="simpleRunner" name="" type="simpleRunner">
+        <parameters>
+          <param name="script.content" value="echo %a% &gt; a.txt" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <build-extensions>
+      <extension id="matrix" type="matrix">
+        <parameters>
+          <param name="matrix.param.a.1" value="a" />
+          <param name="matrix.value.a.1" value="1" />
+          <param name="matrix.value.a.2" value="2" />
+        </parameters>
+      </extension>
+    </build-extensions>
+  </settings>
+</build-type>
+
