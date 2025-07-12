@@ -24,6 +24,13 @@
         </parameters>
       </extension>
     </build-extensions>
+    <dependencies>
+      <depend-on sourceBuildTypeId="Project1_Subproject2_Build2">
+        <options>
+          <option name="run-build-if-dependency-failed" value="RUN_ADD_PROBLEM" />
+        </options>
+      </depend-on>
+    </dependencies>
   </settings>
 </build-type>
 
