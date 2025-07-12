@@ -29,19 +29,17 @@ version = "2025.03"
 project {
     defaultTemplate = AbsoluteId("Project1_Ljhljkhjkhkj")
 
-    buildType(Project1_Subp_Sdf)
+    buildType(Sdf)
 
-    template(Project1_Ljhljkhjkhkj)
-    template(Project1_Subp_Ggg)
+    template(Ggg)
 
     params {
         param("a", "a")
     }
 }
 
-object Project1_Subp_Sdf : BuildType({
-    templates(Project1_Ljhljkhjkhkj, Project1_Subp_Ggg)
-    id("Sdf")
+object Sdf : BuildType({
+    templates(AbsoluteId("Project1_Ljhljkhjkhkj"), RelativeId("Ggg"))
     name = "sdf"
 
     artifactRules = "file.txt"
@@ -65,12 +63,6 @@ object Project1_Subp_Sdf : BuildType({
     }
 })
 
-object Project1_Ljhljkhjkhkj : Template({
-    id = AbsoluteId("Project1_Ljhljkhjkhkj")
-    name = "my template"
-})
-
-object Project1_Subp_Ggg : Template({
-    id("Ggg")
+object Ggg : Template({
     name = "ggg"
 })
