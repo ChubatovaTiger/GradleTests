@@ -5,8 +5,5 @@ d
 s
 d
 x
-s
-f
-ss
-do
+
 d
