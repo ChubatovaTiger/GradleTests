@@ -8,5 +8,5 @@ x
 s
 f
 ss
-d
+do
 d
