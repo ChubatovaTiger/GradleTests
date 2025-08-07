@@ -9,11 +9,11 @@ public class liontest {
 
     @Test
     public void test41flk1() {
-        try{Thread.sleep(5);}catch(InterruptedException e){System.out.println(e);}
+        try{Thread.sleep(20);}catch(InterruptedException e){System.out.println(e);}
         if (System.currentTimeMillis()%2==1){
         }
         else {
-            //Assert.fail("fa0134");
+            Assert.fail("fa0134");
 
         };
 
