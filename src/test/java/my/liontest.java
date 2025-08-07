@@ -9,7 +9,7 @@ public class liontest {
 
     @Test
     public void test41flk1() {
-        try{Thread.sleep(30001);}catch(InterruptedException e){System.out.println(e);}
+        try{Thread.sleep(30000);}catch(InterruptedException e){System.out.println(e);}
         if (System.currentTimeMillis()%2==1){
         }
         else {
@@ -21,12 +21,14 @@ public class liontest {
     
     @Test
     public void test42s() {
-        //if (System.currentTimeMillis()%3==1){
-        //}
-        //else {
-            //Assert.fail("fail mkk_remote2");
+        try{Thread.sleep(30001);}catch(InterruptedException e){System.out.println(e);}
+        if (System.currentTimeMillis()%2==1){
+        }
+        else {
+            Assert.fail("fa42s");
 
-        //};
+        };
+
 
     };
         @Test
