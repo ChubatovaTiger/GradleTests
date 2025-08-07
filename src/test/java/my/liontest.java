@@ -34,7 +34,13 @@ public class liontest {
         @Test
     public void test43s() {
 
-            //Assert.fail("fail mkk_remote2");
+                  try{Thread.sleep(30001);}catch(InterruptedException e){System.out.println(e);}
+        if (System.currentTimeMillis()%2==1){
+        }
+        else {
+            Assert.fail("fa43s");
+
+        };
 
 
 
