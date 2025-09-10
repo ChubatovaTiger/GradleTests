@@ -46,6 +46,7 @@ object RecipeChange : BuildType({
         script {
             id = "simpleRunner"
             scriptContent = "echo %a%"
+            dockerImage = "python"
         }
     }
 })
