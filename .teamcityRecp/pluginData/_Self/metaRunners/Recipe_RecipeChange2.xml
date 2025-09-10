@@ -2,7 +2,7 @@
   <description>test2</description>
   <settings>
     <parameters>
-      <param name="a" value="2" />
+      <param name="a" value="1" />
     </parameters>
     <build-runners>
       <runner name="" type="simpleRunner">
