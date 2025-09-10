@@ -27,6 +27,7 @@ version = "2025.07"
 
 project {
 
+    buildType(Use)
     buildType(RecipeChange)
 }
 
@@ -47,4 +48,8 @@ object RecipeChange : BuildType({
             scriptContent = "echo %a%"
         }
     }
+})
+
+object Use : BuildType({
+    name = "use"
 })
