@@ -1,0 +1,9 @@
+<meta-runner name="RecipeChange">
+  <description>test task</description>
+  <settings>
+    <parameters>
+      <param name="a" value="1" />
+    </parameters>
+    <requirements />
+  </settings>
+</meta-runner>
