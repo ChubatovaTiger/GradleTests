@@ -33,7 +33,7 @@ object RecipeChange : BuildType({
     name = "RecipeChange"
 
     params {
-        param("a", "1")
+        param("a", "2")
     }
 
     vcs {
