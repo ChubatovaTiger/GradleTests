@@ -52,17 +52,4 @@ object RecipeChange : BuildType({
 
 object Use : BuildType({
     name = "use"
-
-    steps {
-        step {
-            id = "Recipe_RecipeChange"
-            type = "Recipe_RecipeChange"
-            executionMode = BuildStep.ExecutionMode.DEFAULT
-            param("a", "2")
-            param("plugin.docker.imagePlatform", "")
-            param("plugin.docker.imageId", "")
-            param("teamcity.step.phase", "")
-            param("plugin.docker.run.parameters", "")
-        }
-    }
 })
