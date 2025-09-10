@@ -1,0 +1,18 @@
+<meta-runner name="RecipeChange2">
+  <description>test2</description>
+  <settings>
+    <parameters>
+      <param name="a" value="2" />
+    </parameters>
+    <build-runners>
+      <runner name="" type="simpleRunner">
+        <parameters>
+          <param name="script.content" value="echo %a%" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <requirements />
+  </settings>
+</meta-runner>
