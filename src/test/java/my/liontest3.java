@@ -31,7 +31,7 @@ public class liontest3 {
         @Test
     public void test43s() {
 
-            Assert.fail("fail mkk_remote2");
+            Assert.fail("fail mkk_remote");
 
 
 
