@@ -31,6 +31,10 @@ version = "2025.07"
 project {
     description = "Contains all other projects"
 
+    params {
+        param("df", "sdf")
+    }
+
     features {
         buildReportTab {
             id = "PROJECT_EXT_1"
