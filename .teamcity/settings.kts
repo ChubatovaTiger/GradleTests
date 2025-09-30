@@ -33,6 +33,7 @@ project {
 
     params {
         param("df", "sdf")
+        password("blue2", "credentialsJSON:b8410303-b00a-49c4-a15b-91c63860ad41")
     }
 
     features {
