@@ -25,10 +25,7 @@ To debug in IntelliJ Idea, open the 'Maven Projects' tool window (View
 version = "2025.07"
 
 project {
-    description = """
-        line1
-        line2
-    """.trimIndent()
+    description = "line1line2"
 
     buildType(Build)
 }
