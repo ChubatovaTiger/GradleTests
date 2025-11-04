@@ -19,3 +19,4 @@ struct X {
 };
       
 k
+d
