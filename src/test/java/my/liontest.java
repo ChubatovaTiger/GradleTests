@@ -9,7 +9,7 @@ public class liontest {
 
     @Test
     public void test41flk1() {
-        try{Thread.sleep(30000);}catch(InterruptedException e){System.out.println(e);}
+        try{Thread.sleep(3000);}catch(InterruptedException e){System.out.println(e);}
         if (System.currentTimeMillis()%2==1){
         }
         else {
@@ -21,7 +21,7 @@ public class liontest {
     
     @Test
     public void test42s() {
-        try{Thread.sleep(30001);}catch(InterruptedException e){System.out.println(e);}
+        try{Thread.sleep(3000);}catch(InterruptedException e){System.out.println(e);}
         if (System.currentTimeMillis()%2==1){
         }
         else {
@@ -34,7 +34,7 @@ public class liontest {
         @Test
     public void test43s() {
 
-                  try{Thread.sleep(30001);}catch(InterruptedException e){System.out.println(e);}
+                  try{Thread.sleep(3000);}catch(InterruptedException e){System.out.println(e);}
         if (System.currentTimeMillis()%2==1){
         }
         else {
