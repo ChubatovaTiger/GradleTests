@@ -9,6 +9,7 @@ object Project : Project({
     buildType(Partest)
     buildType(Both)
     buildType(BothTmpl)
+    buildType(Mtrx2)
     buildType(Buidl1)
 
     template(Tmpl)
