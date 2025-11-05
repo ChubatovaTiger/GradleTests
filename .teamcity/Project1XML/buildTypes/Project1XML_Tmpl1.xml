@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="6a8426ba-2e8e-444e-8f1a-caffaad26501" xsi:noNamespaceSchemaLocation="https://www.jetbrains.com/teamcity/schemas/2025.3/project-config.xsd">
+  <name>tmpl1</name>
+  <settings>
+    <options>
+      <option name="artifactRules" value="*.txt =&gt; a/b/c/1.zip&#xA;1.txt =&gt; 2.zip" />
+    </options>
+    <parameters>
+      <param name="env.JAVA_HOME" value="/opt/homebrew/Cellar/openjdk@21/21.0.6" />
+    </parameters>
+    <build-runners>
+      <runner id="gradle_runner" name="" type="gradle-runner">
+        <parameters>
+          <param name="teamcity.step.mode" value="default" />
+          <param name="ui.gradleRunner.gradle.tasks.names" value="clean build" />
+          <param name="ui.gradleRunner.gradle.wrapper.path" value="" />
+          <param name="ui.gradleRunner.gradle.wrapper.useWrapper" value="true" />
+        </parameters>
+      </runner>
+      <runner id="simpleRunner" name="" type="simpleRunner">
+        <parameters>
+          <param name="script.content"><![CDATA[echo %build.number% > 1.txt
+echo %build.number% > 2.txt]]></param>
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings>
+      <vcs-entry-ref root-id="Project1XML_HttpsGithubComChubatovaTigerGradleTests" />
+    </vcs-settings>
+    <build-extensions>
+      <extension id="parallelTests" type="parallelTests">
+        <parameters>
+          <param name="numberOfBatches" value="10" />
+        </parameters>
+      </extension>
+      <extension id="matrix" type="matrix">
+        <parameters>
+          <param name="groupArtifactsByBuild" value="true" />
+          <param name="matrix.param.par1.1" value="par1" />
+          <param name="matrix.param.par2.2" value="par2" />
+          <param name="matrix.value.par1.1" value="val 1" />
+          <param name="matrix.value.par1.2" value="val2" />
+          <param name="matrix.value.par2.1" value="val 1" />
+          <param name="matrix.value.par2.2" value="val 2" />
+        </parameters>
+      </extension>
+    </build-extensions>
+  </settings>
+</template>
+
