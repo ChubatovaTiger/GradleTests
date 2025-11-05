@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="408f0eb1-10e8-4a33-9e8f-269e5391e78f" xsi:noNamespaceSchemaLocation="https://www.jetbrains.com/teamcity/schemas/2021.1/project-config.xsd">
+  <name>buidl1</name>
+  <description />
+  <settings>
+    <options>
+      <option name="artifactRules" value="*.txt =&gt; a/b/c/1.zip&#xA;1.txt =&gt; 2.zip" />
+    </options>
+    <parameters />
+    <build-runners>
+      <runner id="simpleRunner" name="" type="simpleRunner">
+        <parameters>
+          <param name="script.content"><![CDATA[echo %build.number% > 1.txt
+echo %build.number% > 2.txt]]></param>
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings />
+    <requirements />
+    <build-triggers />
+    <build-extensions>
+      <extension id="matrix" type="matrix">
+        <parameters>
+          <param name="matrix.param.PAr2.2" value="PAr2" />
+          <param name="matrix.param.d.3" value="d" />
+          <param name="matrix.param.f.4" value="f" />
+          <param name="matrix.param.par1.1" value="par1" />
+          <param name="matrix.value.PAr2.1" value="val 2 1" />
+          <param name="matrix.value.PAr2.2" value="val 2.2" />
+          <param name="matrix.value.d.1" value="dg" />
+          <param name="matrix.value.f.1" value="1" />
+          <param name="matrix.value.f.2" value="2" />
+          <param name="matrix.value.par1.1" value="val11" />
+          <param name="matrix.value.par1.2" value="val12" />
+        </parameters>
+      </extension>
+    </build-extensions>
+    <cleanup />
+  </settings>
+</build-type>
+
