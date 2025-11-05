@@ -9,4 +9,6 @@ object Project : Project({
     buildType(Partest)
     buildType(Both)
     buildType(Buidl1)
+
+    template(Tmpl)
 })
