@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="84fd2a58-2a7c-41d1-be0b-7b2a6b99cff6" xsi:noNamespaceSchemaLocation="https://www.jetbrains.com/teamcity/schemas/2025.3/project-config.xsd">
+  <name>both_tmpl</name>
+  <description />
+  <settings ref="Project1XML_Tmpl1" />
+</build-type>
+
