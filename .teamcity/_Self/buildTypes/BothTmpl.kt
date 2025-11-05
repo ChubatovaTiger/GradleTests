@@ -12,6 +12,7 @@ object BothTmpl : BuildType({
         parallelTests {
             id = "BUILD_EXT_1"
             numberOfBatches = 10
+            param("groupArtifactsByBuild", "false")
         }
         matrix {
             id = "BUILD_EXT_2"
@@ -23,6 +24,7 @@ object BothTmpl : BuildType({
                 value("val 1"),
                 value("val 2")
             ))
+            groupArtifactsByBuild = false
         }
     }
 })
