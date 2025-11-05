@@ -24,7 +24,6 @@ object BothTmpl : BuildType({
                 value("val 1"),
                 value("val 2")
             ))
-            groupArtifactsByBuild = false
         }
     }
 })
