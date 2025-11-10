@@ -3,6 +3,9 @@
   <name>buildtestagain</name>
   <description />
   <settings>
+    <options>
+      <option name="artifactRules" value="1.txt" />
+    </options>
     <build-runners>
       <runner id="simpleRunner" name="" type="simpleRunner">
         <parameters>
