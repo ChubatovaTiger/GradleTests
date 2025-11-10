@@ -12,13 +12,21 @@
         </parameters>
       </runner>
     </build-runners>
+    <build-triggers>
+      <build-trigger id="TRIGGER_2" type="vcsTrigger">
+        <parameters>
+          <param name="enableQueueOptimization" value="true" />
+          <param name="quietPeriodMode" value="DO_NOT_USE" />
+        </parameters>
+      </build-trigger>
+    </build-triggers>
     <build-extensions>
       <extension id="matrix" type="matrix">
         <parameters>
           <param name="groupArtifactsByBuild" value="true" />
           <param name="matrix.param.a.1" value="a" />
           <param name="matrix.value.a.1" value="1" />
-          <param name="matrix.value.a.2" value="2" />
+          <param name="matrix.value.a.2" value="3" />
         </parameters>
       </extension>
     </build-extensions>
