@@ -15,6 +15,16 @@
         </parameters>
       </runner>
     </build-runners>
+    <build-extensions>
+      <extension id="matrix" type="matrix">
+        <parameters>
+          <param name="groupArtifactsByBuild" value="false" />
+          <param name="matrix.param.a.1" value="a" />
+          <param name="matrix.value.a.1" value="1" />
+          <param name="matrix.value.a.2" value="2" />
+        </parameters>
+      </extension>
+    </build-extensions>
   </settings>
 </build-type>
 

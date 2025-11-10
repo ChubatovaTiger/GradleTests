@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="6daf1a00-09b6-493a-bc71-d09f3df8e8bf" xsi:noNamespaceSchemaLocation="https://www.jetbrains.com/teamcity/schemas/2021.1/project-config.xsd">
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="6daf1a00-09b6-493a-bc71-d09f3df8e8bf" xsi:noNamespaceSchemaLocation="https://www.jetbrains.com/teamcity/schemas/2025.3/project-config.xsd">
   <name>partest</name>
   <description />
   <settings>
@@ -30,8 +30,6 @@ echo %build.number% > 2.txt]]></param>
     <vcs-settings>
       <vcs-entry-ref root-id="Project1XML_HttpsGithubComChubatovaTigerGradleTests" />
     </vcs-settings>
-    <requirements />
-    <build-triggers />
     <build-extensions>
       <extension id="parallelTests" type="parallelTests">
         <parameters>
@@ -39,7 +37,6 @@ echo %build.number% > 2.txt]]></param>
         </parameters>
       </extension>
     </build-extensions>
-    <cleanup />
   </settings>
 </build-type>
 

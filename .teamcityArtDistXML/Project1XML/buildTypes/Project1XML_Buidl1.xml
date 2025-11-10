@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="408f0eb1-10e8-4a33-9e8f-269e5391e78f" xsi:noNamespaceSchemaLocation="https://www.jetbrains.com/teamcity/schemas/2021.1/project-config.xsd">
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="408f0eb1-10e8-4a33-9e8f-269e5391e78f" xsi:noNamespaceSchemaLocation="https://www.jetbrains.com/teamcity/schemas/2025.3/project-config.xsd">
   <name>buidl1</name>
   <description />
   <settings>
     <options>
       <option name="artifactRules" value="*.txt =&gt; a/b/c/1.zip&#xA;1.txt =&gt; 2.zip" />
     </options>
-    <parameters />
     <build-runners>
       <runner id="simpleRunner" name="" type="simpleRunner">
         <parameters>
@@ -17,9 +16,6 @@ echo %build.number% > 2.txt]]></param>
         </parameters>
       </runner>
     </build-runners>
-    <vcs-settings />
-    <requirements />
-    <build-triggers />
     <build-extensions>
       <extension id="matrix" type="matrix">
         <parameters>
@@ -37,7 +33,6 @@ echo %build.number% > 2.txt]]></param>
         </parameters>
       </extension>
     </build-extensions>
-    <cleanup />
   </settings>
 </build-type>
 
