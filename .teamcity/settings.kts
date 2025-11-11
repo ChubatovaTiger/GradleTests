@@ -29,7 +29,18 @@ project {
 
     buildType(Usual2)
     buildType(Usual1)
+    buildType(Comp)
 }
+
+object Comp : BuildType({
+    name = "comp"
+
+    type = BuildTypeSettings.Type.COMPOSITE
+
+    vcs {
+        showDependenciesChanges = true
+    }
+})
 
 object Usual1 : BuildType({
     name = "usual1"
