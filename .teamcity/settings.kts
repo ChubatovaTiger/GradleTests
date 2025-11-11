@@ -33,6 +33,10 @@ project {
 object Usual1 : BuildType({
     name = "usual1"
 
+    vcs {
+        root(DslContext.settingsRoot)
+    }
+
     steps {
         script {
             id = "simpleRunner"
