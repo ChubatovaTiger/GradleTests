@@ -2,6 +2,7 @@ import jetbrains.buildServer.configs.kotlin.*
 import jetbrains.buildServer.configs.kotlin.CustomChart
 import jetbrains.buildServer.configs.kotlin.CustomChart.*
 import jetbrains.buildServer.configs.kotlin.buildSteps.script
+import jetbrains.buildServer.configs.kotlin.buildTypeCustomChart
 import jetbrains.buildServer.configs.kotlin.projectCustomChart
 
 /*
@@ -69,6 +70,15 @@ project {
             format = CustomChart.Format.DURATION
             series = listOf(
                 Serie(title = "Build Duration (all stages)", key = SeriesKey.BUILD_DURATION, sourceBuildTypeId = "Project1_Comp")
+            )
+        }
+        buildTypeCustomChart {
+            id = "PROJECT_EXT_6"
+            title = "New chart title"
+            seriesTitle = "Serie"
+            format = CustomChart.Format.DURATION
+            series = listOf(
+                Serie(title = "Build Duration (all stages)", key = SeriesKey.BUILD_DURATION)
             )
         }
     }
