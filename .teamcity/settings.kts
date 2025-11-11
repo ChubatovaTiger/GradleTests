@@ -27,11 +27,27 @@ version = "2025.07"
 
 project {
 
+    buildType(Usual2)
     buildType(Usual1)
 }
 
 object Usual1 : BuildType({
     name = "usual1"
+
+    vcs {
+        root(DslContext.settingsRoot)
+    }
+
+    steps {
+        script {
+            id = "simpleRunner"
+            scriptContent = "sleep 12"
+        }
+    }
+})
+
+object Usual2 : BuildType({
+    name = "usual2"
 
     vcs {
         root(DslContext.settingsRoot)
