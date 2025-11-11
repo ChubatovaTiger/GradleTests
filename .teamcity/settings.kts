@@ -1,5 +1,8 @@
 import jetbrains.buildServer.configs.kotlin.*
+import jetbrains.buildServer.configs.kotlin.CustomChart
+import jetbrains.buildServer.configs.kotlin.CustomChart.*
 import jetbrains.buildServer.configs.kotlin.buildSteps.script
+import jetbrains.buildServer.configs.kotlin.projectCustomChart
 
 /*
 The settings script is an entry point for defining a TeamCity
@@ -30,6 +33,18 @@ project {
     buildType(Usual2)
     buildType(Usual1)
     buildType(Comp)
+
+    features {
+        projectCustomChart {
+            id = "PROJECT_EXT_2"
+            title = "us"
+            seriesTitle = "Serie"
+            format = CustomChart.Format.TEXT
+            series = listOf(
+                Serie(title = "Build Duration (all stages)", key = SeriesKey.BUILD_DURATION, sourceBuildTypeId = "Project1_Usual1")
+            )
+        }
+    }
 }
 
 object Comp : BuildType({
