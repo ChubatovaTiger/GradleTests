@@ -40,6 +40,15 @@ object Comp : BuildType({
     vcs {
         showDependenciesChanges = true
     }
+
+    dependencies {
+        snapshot(Usual1) {
+            reuseBuilds = ReuseBuilds.NO
+        }
+        snapshot(Usual2) {
+            reuseBuilds = ReuseBuilds.NO
+        }
+    }
 })
 
 object Usual1 : BuildType({
