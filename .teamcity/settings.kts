@@ -62,6 +62,15 @@ project {
                 Serie(title = "Build Duration (all stages)", key = SeriesKey.BUILD_DURATION, sourceBuildTypeId = "Project1_Usual1")
             )
         }
+        projectCustomChart {
+            id = "PROJECT_EXT_5"
+            title = "composite no checkout"
+            seriesTitle = "Serie"
+            format = CustomChart.Format.DURATION
+            series = listOf(
+                Serie(title = "Build Duration (all stages)", key = SeriesKey.BUILD_DURATION, sourceBuildTypeId = "Project1_Comp")
+            )
+        }
     }
 }
 
