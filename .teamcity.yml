@@ -15,3 +15,5 @@ jobs:
     steps: []
 import-parameters:
   - par1
+secrets:
+  sec1: credentialsJSON:6487fc74-682b-4619-9449-ca1b7e056346
