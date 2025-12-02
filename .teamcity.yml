@@ -4,11 +4,6 @@ dependencies:
       enforce-revisions-synchronisation: true
       on-failed-dependency: run-add-problem
       on-incomplete-dependency: mark-as-failed-to-start
-  - Project1_Build2:
-      reuse: successful
-      enforce-revisions-synchronisation: true
-      on-failed-dependency: run-add-problem
-      on-incomplete-dependency: mark-as-failed-to-start
 jobs:
   Job1:
     name: Job 1
