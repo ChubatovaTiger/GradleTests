@@ -12,7 +12,9 @@ dependencies:
 jobs:
   Job1:
     name: Job 1
-    steps: []
+    steps:
+      - type: script
+        script-content: sleep 60
 import-parameters:
   - par1
 secrets:
