@@ -13,3 +13,5 @@ jobs:
   Job1:
     name: Job 1
     steps: []
+import-parameters:
+  - par1
