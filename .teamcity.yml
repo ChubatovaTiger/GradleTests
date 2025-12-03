@@ -14,7 +14,7 @@ jobs:
     name: Job 1
     steps:
       - type: script
-        script-content: sleep 60
+        script-content: sleep 6
 import-parameters:
   - par1
 secrets:
