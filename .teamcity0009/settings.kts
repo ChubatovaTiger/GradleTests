@@ -28,7 +28,7 @@ To debug in IntelliJ Idea, open the 'Maven Projects' tool window (View
 'Debug' option is available in the context menu for the task.
 */
 
-version = "2025.03"
+version = "2025.11"
 
 project {
 
@@ -337,9 +337,11 @@ object Githubtiger_Githublion : BuildType({
 object Gitlab : Project({
     name = "gitlab"
 
+    vcsRoot(Gitlab_HttpsGithubComChubatovaTigerManyBranches)
     vcsRoot(Gitlab_HttpsGitlabComAChubatovaPythonIni)
 
     buildType(Gitlab_Gitlab)
+    buildType(Gitlab_Lkl)
 })
 
 object Gitlab_Gitlab : BuildType({
@@ -357,6 +359,37 @@ object Gitlab_Gitlab : BuildType({
             param("secure:gitlabAccessToken", "credentialsJSON:50dab840-e869-45ee-8c55-9cc73c11de1c")
         }
     }
+})
+
+object Gitlab_Lkl : BuildType({
+    name = "lkl"
+    paused = true
+
+    vcs {
+        root(AbsoluteId("AwsCodeCommitPem"))
+        root(Gitlab_HttpsGithubComChubatovaTigerManyBranches)
+    }
+
+    steps {
+        script {
+            id = "simpleRunner"
+            scriptContent = """echo "OutOfMemoryError""""
+        }
+    }
+
+    triggers {
+        schedule {
+            triggerBuild = always()
+            withPendingChangesOnly = false
+        }
+    }
+})
+
+object Gitlab_HttpsGithubComChubatovaTigerManyBranches : GitVcsRoot({
+    name = "https://github.com/ChubatovaTiger/manyBranches"
+    url = "https://github.com/ChubatovaTiger/manyBranches"
+    branch = "refs/heads/12e"
+    branchSpec = "refs/heads/(*)"
 })
 
 object Gitlab_HttpsGitlabComAChubatovaPythonIni : GitVcsRoot({
