@@ -7,3 +7,5 @@ jobs:
 dependencies:
   - Project1_SubProject1_Build2:
       reuse: successful
+import-parameters:
+  - pr1
