@@ -7,6 +7,7 @@ jobs:
         tasks: clean test
         jdk-home: /opt/homebrew/Cellar/openjdk@21/21.0.6
     allow-reuse: false
+    parallelism: 2
 dependencies:
   - Project1_SubProject1_Build2:
       reuse: none
