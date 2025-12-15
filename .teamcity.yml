@@ -1,6 +1,9 @@
 jobs:
   Job1:
     name: Job 1
+    steps:
+      - type: script
+        script-content: echo a
 dependencies:
   - Project1_SubProject1_Build2:
       reuse: none
