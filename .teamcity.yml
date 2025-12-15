@@ -7,4 +7,5 @@ jobs:
 dependencies:
   - Project1_SubProject1_Build2:
       reuse: successful
-
+parameters:
+  teamcity.build.chain.skipTags: slow_tests2
