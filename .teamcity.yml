@@ -1,21 +1,4 @@
-dependencies:
-  - Project1_Build1:
-      reuse: successful
-      enforce-revisions-synchronisation: true
-      on-failed-dependency: run-add-problem
-      on-incomplete-dependency: mark-as-failed-to-start
-  - Project1_Build2:
-      reuse: successful
-      enforce-revisions-synchronisation: true
-      on-failed-dependency: run-add-problem
-      on-incomplete-dependency: mark-as-failed-to-start
 jobs:
   Job1:
     name: Job 1
-    steps:
-      - type: script
-        script-content: sleep 6
-import-parameters:
-  - par1
-secrets:
-  sec1: credentialsJSON:6487fc74-682b-4619-9449-ca1b7e056346
+    steps: []
