@@ -2,3 +2,9 @@ jobs:
   Job1:
     name: Job 1
     steps: []
+dependencies:
+  - Project1_SubProject1_Build2:
+      reuse: none
+      enforce-revisions-synchronisation: true
+      on-failed-dependency: run-add-problem
+      on-incomplete-dependency: mark-as-failed-to-start
