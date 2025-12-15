@@ -4,6 +4,7 @@ jobs:
     steps:
       - type: script
         script-content: echo a
+    allow-reuse: false
 dependencies:
   - Project1_SubProject1_Build2:
       reuse: none
