@@ -3,5 +3,5 @@ jobs:
     name: Job 1
 dependencies:
   - Project1_SubProject1_Build2:
-      reuse: none
+      reuse: successful
 
