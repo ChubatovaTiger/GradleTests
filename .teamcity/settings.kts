@@ -95,6 +95,13 @@ object Build_2 : BuildType({
         root(DslContext.settingsRoot)
     }
 
+    steps {
+        script {
+            id = "simpleRunner"
+            scriptContent = "echo ${Build.depParamRefs.buildNumber}"
+        }
+    }
+
     features {
         nuGetFeedCredentials {
             feedUrl = "http://localhost:8111/httpAuth/app/nuget/feed/_Root/wer/v3/index.json"
