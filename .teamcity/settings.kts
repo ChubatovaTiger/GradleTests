@@ -30,6 +30,7 @@ project {
 
     buildType(Build2)
     buildType(Build)
+    buildType(Build_2)
 }
 
 object Build : BuildType({
@@ -79,6 +80,26 @@ object Build2 : BuildType({
     dependencies {
         snapshot(Build) {
             reuseBuilds = ReuseBuilds.NO
+        }
+    }
+})
+
+object Build_2 : BuildType({
+    name = "build (1)"
+
+    params {
+        param("par1", "1")
+    }
+
+    vcs {
+        root(DslContext.settingsRoot)
+    }
+
+    features {
+        nuGetFeedCredentials {
+            feedUrl = "http://localhost:8111/httpAuth/app/nuget/feed/_Root/wer/v3/index.json"
+            username = "admin"
+            password = "credentialsJSON:f27ff0cb-f72f-49a2-b06e-b5ef549b52c6"
         }
     }
 })
