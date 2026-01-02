@@ -102,4 +102,10 @@ object Build_2 : BuildType({
             password = "credentialsJSON:f27ff0cb-f72f-49a2-b06e-b5ef549b52c6"
         }
     }
+
+    dependencies {
+        snapshot(Build2) {
+            reuseBuilds = ReuseBuilds.NO
+        }
+    }
 })
