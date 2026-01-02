@@ -110,7 +110,6 @@ object Build2_2 : BuildType({
 
     dependencies {
         snapshot(Build) {
-            reuseBuilds = ReuseBuilds.NO
         }
     }
 })
