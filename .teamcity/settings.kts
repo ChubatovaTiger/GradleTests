@@ -28,6 +28,7 @@ version = "2024.03"
 
 project {
 
+    buildType(Build2_2)
     buildType(Build2)
     buildType(Build)
     buildType(Build_2)
@@ -55,6 +56,37 @@ object Build : BuildType({
 
 object Build2 : BuildType({
     name = "build2"
+
+    vcs {
+        root(DslContext.settingsRoot)
+
+        showDependenciesChanges = true
+    }
+
+    steps {
+        script {
+            id = "simpleRunner"
+            scriptContent = "echo ${Build.depParamRefs.buildNumber}"
+        }
+    }
+
+    features {
+        nuGetFeedCredentials {
+            feedUrl = "http://localhost:8111/httpAuth/app/nuget/feed/_Root/wer/v3/index.json"
+            username = "admin"
+            password = "credentialsJSON:f27ff0cb-f72f-49a2-b06e-b5ef549b52c6"
+        }
+    }
+
+    dependencies {
+        snapshot(Build) {
+            reuseBuilds = ReuseBuilds.NO
+        }
+    }
+})
+
+object Build2_2 : BuildType({
+    name = "build2 (1)"
 
     vcs {
         root(DslContext.settingsRoot)
