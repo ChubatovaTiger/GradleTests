@@ -12,6 +12,8 @@ repositories {
 
 dependencies {
     testImplementation("junit:junit:4.13")
+       testImplementation 'org.junit.jupiter:junit-jupiter-api:5.10.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.10.0'
 }
 
 test {
@@ -25,6 +27,7 @@ test {
         maxFailures = 20
         failOnPassedAfterRetry = false
     }
+    useJUnitPlatform()
 }
 
 task hello {
