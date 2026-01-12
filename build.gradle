@@ -20,14 +20,30 @@ dependencies {
 }
 
 test {
-    useJUnitPlatform() // important for JUnit 5 dynamic tests
+    useJUnitPlatform()
 
-    // allow JUnit 4 tests to run on JUnit Platform
-    // this enables discovery of old JUnit 4 tests
-    // JUnit 4 tests must use the vintage engine
-    jvmArgs += ['-Djunit.platform.output.capture.stdout=true']
+    def nonJavaLikeTests = []
+
+    afterTest { descriptor, result ->
+        // Extract the display name inside parentheses if it exists
+        def displayName = descriptor.displayName
+        def nameInsideParentheses = displayName.replaceAll(/^.*\((.*)\)$/, '$1')
+
+        // Heuristic: mark as non-Java-like if it contains non-alphanumeric characters or starts with a number
+        if (nameInsideParentheses =~ /^[^a-zA-Z_]|[^a-zA-Z0-9_]/) {
+            nonJavaLikeTests << nameInsideParentheses
+            println "Non-Java-like test: ${nameInsideParentheses}"
+        }
+    }
+
+    afterSuite { desc, result ->
+        if (desc.parent == null && !nonJavaLikeTests.isEmpty()) {
+            def file = file("$buildDir/nonJavaLikeTests.txt")
+            file.text = nonJavaLikeTests.join('\n')
+            println "Saved ${nonJavaLikeTests.size()} non-Java-like tests to $file"
+        }
+    }
 }
-
 task hello {
     doLast {
         println providers.systemProperty("teamcity.version").present
