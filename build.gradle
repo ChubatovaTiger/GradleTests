@@ -48,6 +48,8 @@ task hello {
     doLast {
         println("##teamcity[testStarted name='abcd']")
         println("##teamcity[testFinished name='abcd']")
+        println("##teamcity[testStarted name='c.d.e.f']")
+        println("##teamcity[testFinished name='c.d.e.f']")
 
     }
 }
