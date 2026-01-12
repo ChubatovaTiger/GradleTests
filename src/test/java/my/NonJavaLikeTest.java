@@ -6,7 +6,7 @@ import java.util.Collection;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class testfactory {
+public class NonJavaLikeTest {
 
     @TestFactory
     Collection<DynamicTest> dynamicTests() {
