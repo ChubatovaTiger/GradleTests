@@ -11,23 +11,21 @@ repositories {
 }
 
 dependencies {
-    testImplementation("junit:junit:4.13")
-       testImplementation 'org.junit.jupiter:junit-jupiter-api:5.10.0'
+    // JUnit 5
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.10.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.10.0'
+
+    // JUnit 4
+    testImplementation 'junit:junit:4.13.2'  // classic JUnit 4
 }
 
 test {
-    useJUnit()
-    ignoreFailures = false
-    filter {
-    //excludeTestsMatching "*mytest*"
- }
-    retry {
-        maxRetries = 3
-        maxFailures = 20
-        failOnPassedAfterRetry = false
-    }
-    useJUnitPlatform()
+    useJUnitPlatform() // important for JUnit 5 dynamic tests
+
+    // allow JUnit 4 tests to run on JUnit Platform
+    // this enables discovery of old JUnit 4 tests
+    // JUnit 4 tests must use the vintage engine
+    jvmArgs += ['-Djunit.platform.output.capture.stdout=true']
 }
 
 task hello {
