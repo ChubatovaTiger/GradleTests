@@ -50,6 +50,10 @@ task hello {
         println("##teamcity[testFinished name='abcd']")
         println("##teamcity[testStarted name='c.d.e.f']")
         println("##teamcity[testFinished name='c.d.e.f']")
+         println("##teamcity[testStarted name='fuchs.d.e.f']")
+        println("##teamcity[testFinished name='fuchs.d.e.f']")
+        println("##teamcity[testStarted name='nnnn']")
+        println("##teamcity[testFinished name='nnnn']")
 
     }
 }
