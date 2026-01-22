@@ -48,6 +48,16 @@ object Build1 : BuildType({
             id = "simpleRunner"
             scriptContent = "echo %build.number% > a-%build.number%.txt"
         }
+        step {
+            id = "tc_recipe_jetbrains_tag_current_build_1_0_1"
+            type = "tc:recipe:jetbrains/tag-current-build@1.0.1"
+            executionMode = BuildStep.ExecutionMode.DEFAULT
+            param("env.input_tags", "test")
+            param("plugin.docker.imagePlatform", "")
+            param("plugin.docker.imageId", "")
+            param("teamcity.step.phase", "")
+            param("plugin.docker.run.parameters", "")
+        }
     }
 
     features {
