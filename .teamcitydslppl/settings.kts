@@ -63,7 +63,11 @@ object Build : BuildType({
     }
 
     dependencies {
-        snapshot(RelativeId("GradleTests")) {
+        snapshot(Project2_GradleTests) {
+            reuseBuilds = ReuseBuilds.NO
+            onDependencyFailure = FailureAction.FAIL_TO_START
+            onDependencyCancel = FailureAction.CANCEL
+            synchronizeRevisions = false
         }
     }
 })
