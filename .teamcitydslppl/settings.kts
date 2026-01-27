@@ -1,6 +1,7 @@
 import jetbrains.buildServer.configs.kotlin.*
 import jetbrains.buildServer.configs.kotlin.buildFeatures.perfmon
 import jetbrains.buildServer.configs.kotlin.buildSteps.nodeJS
+import jetbrains.buildServer.configs.kotlin.buildSteps.script
 import jetbrains.buildServer.configs.kotlin.vcs.GitVcsRoot
 
 /*
@@ -77,6 +78,13 @@ object Build1 : BuildType({
 
     vcs {
         root(HttpsGithubComChubatovaTigerNodejssampleRefsHeadsMaster)
+    }
+
+    steps {
+        script {
+            id = "simpleRunner"
+            scriptContent = "dd if=/dev/urandom of=random.bin bs=8m count=1"
+        }
     }
 
     features {
