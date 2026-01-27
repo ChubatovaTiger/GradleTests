@@ -63,7 +63,7 @@ object Build : BuildType({
         }
     }
 
-    dependencies {
+  /*  dependencies {
         snapshot(Project2_GradleTests) {
             reuseBuilds = ReuseBuilds.NO
             onDependencyFailure = FailureAction.FAIL_TO_START
@@ -71,6 +71,7 @@ object Build : BuildType({
             synchronizeRevisions = false
         }
     }
+*/
 })
 
 object Build1 : BuildType({
