@@ -109,10 +109,10 @@ object Build3 : BuildType({
         snapshot(Build2) {
             reuseBuilds = ReuseBuilds.NO
         }
-        snapshot(RelativeId("Pipeline1GradleTests")) {
+        snapshot(ParTest_Pipeline1GradleTests) {
             reuseBuilds = ReuseBuilds.NO
         }
-        snapshot(RelativeId("Pipeline3")) {
+        snapshot(ParTest_Pipeline3) {
             reuseBuilds = ReuseBuilds.NO
         }
     }
