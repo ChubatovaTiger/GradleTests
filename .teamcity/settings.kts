@@ -47,6 +47,10 @@ object Build1 : BuildType({
         snapshot(Build2) {
         }
     }
+
+    requirements {
+        startsWith("teamcity.agent.name", "agent1")
+    }
 })
 
 object Build2 : BuildType({
