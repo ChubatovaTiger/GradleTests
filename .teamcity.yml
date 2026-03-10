@@ -1,0 +1,7 @@
+jobs:
+  Job1:
+    name: Job 1
+    steps: []
+dependencies:
+  - Project1_Build:
+      reuse: none
