@@ -49,7 +49,7 @@ object Build1 : BuildType({
     }
 
     requirements {
-        startsWith("teamcity.agent.name", "agent1")
+        contains("teamcity.agent.name", "agent1")
     }
 })
 
