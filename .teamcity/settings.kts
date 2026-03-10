@@ -44,7 +44,7 @@ object Build1 : BuildType({
     }
 
     dependencies {
-        snapshot(Build2) {
+        snapshot(Build3) {
         }
     }
 })
