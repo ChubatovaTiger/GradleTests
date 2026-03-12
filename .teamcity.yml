@@ -2,5 +2,3 @@ jobs:
   Job1:
     name: Job 1
     steps: []
-dependencies:
-  - Pipeline2025112_Ppl1
