@@ -2,3 +2,6 @@ jobs:
   Job1:
     name: Job 1
     steps: []
+dependencies:
+  - P20260312_Build1:
+      reuse: none
