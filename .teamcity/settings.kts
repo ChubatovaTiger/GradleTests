@@ -32,6 +32,10 @@ project {
 object Build1 : BuildType({
     name = "Build1"
 
+    params {
+        param("a", "val1")
+    }
+
     vcs {
         root(DslContext.settingsRoot)
     }
