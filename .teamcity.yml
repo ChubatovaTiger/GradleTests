@@ -7,5 +7,3 @@ jobs:
     steps:
       - type: script
         script-content: echo %dep.ProjectA_A.person%
-parameters:
-  aaa: '%dep.ProjectA_A.person%'
