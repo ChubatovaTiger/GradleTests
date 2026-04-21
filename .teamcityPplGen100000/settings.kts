@@ -129,7 +129,7 @@ object Ppl1 : Pipeline({
             synchronizeRevisions = false
         }
         snapshot(C) {
-reuseBuilds = ReuseBuilds.NO
+            reuseBuilds = ReuseBuilds.NO
         }
     }
 
