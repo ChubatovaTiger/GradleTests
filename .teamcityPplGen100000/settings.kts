@@ -94,7 +94,7 @@ object C : BuildType({
 })
 
 object RunAll : BuildType({
-    name = "RunAll"
+    name = "RunAll2"
 
     type = BuildTypeSettings.Type.COMPOSITE
 
