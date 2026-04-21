@@ -1,6 +1,6 @@
 version: 1
 dependencies:
-  - ProjectA_A
+  - ProjectA_RunAll
 jobs:
   Job1:
     name: Job 1
