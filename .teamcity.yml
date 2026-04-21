@@ -1,0 +1,6 @@
+version: 1
+dependencies:
+  - ProjectA_A
+jobs:
+  Job1:
+    name: Job 1
