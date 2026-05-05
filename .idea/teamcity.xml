@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="LinkedProjects">
+    <ProjectScope>
+      <Node id="Gtggcc" p="true" />
+    </ProjectScope>
+  </component>
+  <component name="LinkedServer">
+    <option name="serverUrl" value="http://localhost:8111" />
+  </component>
+</project>
