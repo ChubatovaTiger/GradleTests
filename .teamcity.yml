@@ -1,0 +1,29 @@
+version: 1
+dependencies:
+  - Chubatova20261tenant1_Build
+jobs:
+  Job2:
+    name: Job 2
+    runs-on:
+      self-hosted:
+        - requirement: not-equals
+          name: RQ_1
+          parameter: teamcity.agent.jbHosted
+          value: 'true'
+  Job1:
+    name: Job 1
+    runs-on:
+      self-hosted:
+        - requirement: not-equals
+          name: RQ_1
+          parameter: teamcity.agent.jbHosted
+          value: 'true'
+  Job3:
+    name: Job 3
+    runs-on:
+      self-hosted:
+        - cpu: 2
+        - requirement: not-contains
+          name: teamcity.agent.name
+          parameter: teamcity.agent.name
+          value: kuku
