@@ -48,3 +48,6 @@ jobs:
           name: RQ_2
           parameter: teamcity.agent.jbHosted
           value: 'true'
+  Job4:
+    name: Job 4
+    runs-on: self-hosted
