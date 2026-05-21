@@ -36,6 +36,8 @@ jobs:
             script: true
         id: RUNNER_1
         type: script
+      - type: script
+        script-content: echo b
     runs-on:
       self-hosted:
         - requirement: not-equals
