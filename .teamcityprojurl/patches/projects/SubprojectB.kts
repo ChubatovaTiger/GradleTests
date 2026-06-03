@@ -12,5 +12,9 @@ in the root project, and delete the patch script.
 create(DslContext.projectId, Project({
     id("SubprojectB")
     name = "subprojectB"
+
+    params {
+        param("teamcity.project.server_url", "a")
+    }
 }))
 
