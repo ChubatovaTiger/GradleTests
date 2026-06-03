@@ -8,4 +8,10 @@ object SubprojectB_Build : BuildType({
     vcs {
         root(DslContext.settingsRoot)
     }
+        steps {
+        script {
+            id = "simpleRunner"
+            scriptContent = "echo " + DslContext.serverUrl
+        }
+    }
 })
