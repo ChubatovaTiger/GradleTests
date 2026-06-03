@@ -1,0 +1,20 @@
+<meta-runner name="Build2">
+  <description>ten1</description>
+  <settings>
+    <parameters>
+      <param name="teamcity.project.server_url" value="https://chubatova20261tenant1.dev.sandbox.teamcity.aws.intellij.net" />
+    </parameters>
+    <build-runners>
+      <runner name="" type="simpleRunner">
+        <parameters>
+          <param name="script.content" value="echo 1" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <requirements>
+      <contains id="RQ_1" name="teamcity.agent.name" value="sdfsdfsdf" />
+    </requirements>
+  </settings>
+</meta-runner>
