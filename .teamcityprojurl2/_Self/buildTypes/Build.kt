@@ -10,7 +10,7 @@ object Build : BuildType({
     steps {
         script {
             id = "simpleRunner"
-            scriptContent = "echo https://chubatova20261tenant1.dev.sandbox.teamcity.aws.intellij.net"
+            scriptContent = "echo " + DslContext.serverUrl
         }
     }
 
