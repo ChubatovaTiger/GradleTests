@@ -10,7 +10,7 @@ object Build : BuildType({
     steps {
         script {
             id = "simpleRunner"
-            scriptContent = "echo a"
+            scriptContent = "echo " + DslContext.serverUrl
         }
     }
 
