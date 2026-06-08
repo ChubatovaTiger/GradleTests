@@ -10,9 +10,11 @@ import jetbrains.buildServer.configs.kotlin.projectFeatures.githubAppConnection
 object Project : Project({
 
     vcsRoot(HttpsGithubComChubatovaTigerVsdormRefsHeadsMaster)
+    vcsRoot(HttpsGithubComChubatovaTiger48974refsHeadsMaster)
 
     buildType(Build1)
     buildType(Build2)
+    buildType(Build_2)
     buildType(Build)
 
     params {
