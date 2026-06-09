@@ -11,6 +11,7 @@ object Project : Project({
 
     vcsRoot(HttpsGithubComChubatovaTigerVsdormRefsHeadsMaster)
     vcsRoot(HttpsGithubComChubatovaTiger48974refsHeadsMaster)
+    vcsRoot(HttpsGithubComChubatovaTigerKzh0306refsHeadsMaster)
 
     buildType(Build1)
     buildType(Build2)
