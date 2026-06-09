@@ -21,6 +21,7 @@ changeBuildType(RelativeId("Build")) {
     }
     steps {
         update<ScriptBuildStep>(0) {
+            enabled = false
             clearConditions()
             scriptContent = "sleep 100"
             param("teamcity.kubernetes.executor.pull.policy", "")
