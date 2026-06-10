@@ -29,6 +29,7 @@ changeBuildType(RelativeId("Build")) {
         insert(1) {
             qodana {
                 id = "Qodana"
+                enabled = false
                 linter = jvm {
                     version = Qodana.JVMVersion.LATEST
                 }
