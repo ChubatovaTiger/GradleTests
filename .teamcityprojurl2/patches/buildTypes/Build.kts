@@ -43,6 +43,7 @@ changeBuildType(RelativeId("Build")) {
         add {
             approval {
                 approvalRules = "user:8ecfea6a-f953-49b9-b753-3797a71b2f3f_b6a3a8e4-a253-4859-b991-550530b48ba7"
+                manualRunsApproved = false
             }
         }
     }
