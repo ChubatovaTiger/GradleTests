@@ -1,6 +1,7 @@
 package patches.buildTypes
 
 import jetbrains.buildServer.configs.kotlin.*
+import jetbrains.buildServer.configs.kotlin.buildFeatures.approval
 import jetbrains.buildServer.configs.kotlin.buildSteps.Qodana
 import jetbrains.buildServer.configs.kotlin.buildSteps.ScriptBuildStep
 import jetbrains.buildServer.configs.kotlin.buildSteps.qodana
@@ -34,6 +35,14 @@ changeBuildType(RelativeId("Build")) {
                     version = Qodana.JVMVersion.LATEST
                 }
                 inspectionProfile = default()
+            }
+        }
+    }
+
+    features {
+        add {
+            approval {
+                approvalRules = "user:8ecfea6a-f953-49b9-b753-3797a71b2f3f_b6a3a8e4-a253-4859-b991-550530b48ba7"
             }
         }
     }
