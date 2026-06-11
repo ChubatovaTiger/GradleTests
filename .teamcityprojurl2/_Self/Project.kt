@@ -20,6 +20,7 @@ object Project : Project({
 
     params {
         param("teamcity.project.server_url", "https://chubatova20261tenant1.dev.sandbox.teamcity.aws.intellij.net")
+        password("parsec1", "credentialsJSON:aaed5b5c-4bd9-4820-958f-c815b03c73db")
     }
 
     features {
