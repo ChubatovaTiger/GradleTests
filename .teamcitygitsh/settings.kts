@@ -1,0 +1,78 @@
+import jetbrains.buildServer.configs.kotlin.*
+import jetbrains.buildServer.configs.kotlin.buildSteps.script
+import jetbrains.buildServer.configs.kotlin.pipelines.*
+import jetbrains.buildServer.configs.kotlin.triggers.vcs
+import jetbrains.buildServer.configs.kotlin.vcs.GitVcsRoot
+
+/*
+The settings script is an entry point for defining a TeamCity
+project hierarchy. The script should contain a single call to the
+project() function with a Project instance or an init function as
+an argument.
+
+VcsRoots, BuildTypes, Templates, and subprojects can be
+registered inside the project using the vcsRoot(), buildType(),
+template(), and subProject() methods respectively.
+
+To debug settings scripts in command-line, run the
+
+    mvnDebug org.jetbrains.teamcity:teamcity-configs-maven-plugin:generate
+
+command and attach your debugger to the port 8000.
+
+To debug in IntelliJ Idea, open the 'Maven Projects' tool window (View
+-> Tool Windows -> Maven Projects), find the generate task node
+(Plugins -> teamcity-configs -> teamcity-configs:generate), the
+'Debug' option is available in the context menu for the task.
+*/
+
+version = "2026.1"
+
+project {
+
+    vcsRoot(HttpsGithubComChubatovaTigerGitssh)
+
+    pipeline(Project1_GradleTests)
+}
+
+object HttpsGithubComChubatovaTigerGitssh : GitVcsRoot({
+    name = "https://github.com/ChubatovaTiger/gitssh"
+    url = "https://github.com/ChubatovaTiger/gitssh"
+    branch = "refs/heads/master"
+    branchSpec = "+:refs/heads/*"
+    authMethod = password {
+        userName = "ChubatovaTiger"
+        password = "credentialsJSON:831842c5-afc0-4a77-91c8-61f4e90f54da"
+    }
+})
+
+
+object Project1_GradleTests : Pipeline({
+    id("GradleTests")
+    name = "GradleTests"
+
+    repositories {
+        repository(DslContext.settingsRoot)
+    }
+
+    triggers {
+        vcs {
+        }
+    }
+
+    job(Project1_GradleTests_Job1)
+})
+
+object Project1_GradleTests_Job1 : Job({
+    id("Job1")
+    name = "Job 1"
+
+    steps {
+        script {
+            scriptContent = "echo %dep.ProjectA_A.person%"
+        }
+        script {
+            scriptContent = "echo kuku"
+        }
+    }
+})

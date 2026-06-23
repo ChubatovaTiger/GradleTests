@@ -1,0 +1,9 @@
+<settings>
+  <servers>
+    <server>
+      <id>teamcity-space</id>
+      <username>nastasia.chubatova</username>
+      <password>eyJhbGciOiJSUzUxMiJ9.eyJzdWIiOiIxZ3ppNmoxMkM0cjkiLCJhdWQiOiJjaXJjbGV0LXdlYi11aSIsIm9yZ0RvbWFpbiI6ImpldGJyYWlucyIsIm5hbWUiOiJOYXN0YXNpYS5DaHViYXRvdmEiLCJpc3MiOiJodHRwczovL2pldGJyYWlucy50ZWFtIiwicGVybV90b2tlbiI6IjJZTHk5bTNGNEpPTyIsInByaW5jaXBhbF90eXBlIjoiVVNFUiIsImlhdCI6MTc4MjE2MTE0Mn0.B1THhKBglhhW-aC6ffYScolJKpzX5LYnjyfEkGsvf4qWyqd4H05l0uDhV1zoVXf1cbFWjx06yIeIjEXABE9yVSPTYMVewOaWAmtrPLYnUgsFwkh5BntGfHYOfznO8_xQiMu9mxQ63zMKrXGOFQ9d5Ga2UxKR9dx4ZhN85PF8Ico</password>
+    </server>
+  </servers>
+</settings>
