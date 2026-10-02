@@ -34,20 +34,14 @@ project {
         param("asd", "asd")
     }
 
-    features {
-        untrustedBuildsSettings {
-            id = "PROJECT_EXT_2"
-            defaultAction = UntrustedBuildsSettings.DefaultAction.IGNORE
-            enableLog = true
-        }
-    }
+
 }
 
 object Build1 : BuildType({
     name = "build1"
 
     params {
-        password("aasdsd", "credentialsJSON:0805d4f7-9040-437a-97ea-1a63b74f22da")
+        //password("aasdsd", "credentialsJSON:0805d4f7-9040-437a-97ea-1a63b74f22da")
         param("a", "1")
         param("b", "2")
     }
