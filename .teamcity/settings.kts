@@ -27,6 +27,10 @@ version = "2026.1"
 project {
 
     buildType(Build1)
+
+    params {
+        password("aa", "credentialsJSON:6f7805a5-3e46-4755-b190-60ef15e388b0")
+    }
 }
 
 object Build1 : BuildType({
