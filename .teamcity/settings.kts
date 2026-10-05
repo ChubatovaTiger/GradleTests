@@ -30,6 +30,7 @@ project {
 
     params {
         password("aa", "credentialsJSON:6f7805a5-3e46-4755-b190-60ef15e388b0")
+        password("a", "credentialsJSON:dd710de3-b93b-4279-a5e8-e5b37c31b5c2")
     }
 }
 
@@ -37,6 +38,6 @@ object Build1 : BuildType({
     name = "build1"
 
     params {
-        param("a", "1")
+        param("a", "credentialsJSON:33da9097-88ce-443d-b61b-962c617f2f19")
     }
 })
