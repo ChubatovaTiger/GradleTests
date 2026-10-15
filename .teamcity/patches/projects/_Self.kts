@@ -1,7 +1,6 @@
 package patches.projects
 
 import jetbrains.buildServer.configs.kotlin.*
-import jetbrains.buildServer.configs.kotlin.AmazonEC2CloudImage
 import jetbrains.buildServer.configs.kotlin.AmazonEC2CloudProfile
 import jetbrains.buildServer.configs.kotlin.Project
 import jetbrains.buildServer.configs.kotlin.amazonEC2CloudImage
@@ -15,7 +14,7 @@ accordingly, and delete the patch script.
 */
 changeProject(DslContext.projectId) {
     features {
-        val feature1 = find<AmazonEC2CloudImage> {
+        remove {
             amazonEC2CloudImage {
                 id = "PROJECT_EXT_2"
                 profileId = "amazon-1"
@@ -28,18 +27,7 @@ changeProject(DslContext.projectId) {
                 source = Source("ami-0a19e9bb3173be414")
             }
         }
-        feature1.apply {
-            profileId = "amazon-1"
-            agentPoolId = "-2"
-            name = "im1-win"
-            vpcSubnetId = "subnet-0c4f70b91d8800740"
-            keyPairName = "chubatova-amazon-ireland"
-            instanceType = "t3.medium"
-            securityGroups = listOf("sg-072d8bfa0626ea2a6")
-            source = Source("ami-0675a6f2fd9e480e5")
-            param("ebs-optimized", "")
-        }
-        val feature2 = find<AmazonEC2CloudProfile> {
+        val feature1 = find<AmazonEC2CloudProfile> {
             amazonEC2CloudProfile {
                 id = "amazon-1"
                 name = "pr1-win"
@@ -48,11 +36,24 @@ changeProject(DslContext.projectId) {
                 awsConnectionId = "Project1_AmazonWebServicesAws"
             }
         }
-        feature2.apply {
+        feature1.apply {
             name = "pr1-win"
             terminateIdleMinutes = 30
             region = AmazonEC2CloudProfile.Regions.EU_WEST_DUBLIN
             awsConnectionId = "Project1_AmazonWebServicesAws"
+        }
+        add {
+            amazonEC2CloudImage {
+                id = "PROJECT_EXT_5"
+                profileId = "amazon-1"
+                agentPoolId = "-2"
+                name = "im1-win2"
+                vpcSubnetId = "subnet-0c4f70b91d8800740"
+                keyPairName = "chubatova-amazon-ireland"
+                instanceType = "t3.medium"
+                securityGroups = listOf("sg-072d8bfa0626ea2a6")
+                source = Source("ami-0675a6f2fd9e480e5")
+            }
         }
     }
 }
