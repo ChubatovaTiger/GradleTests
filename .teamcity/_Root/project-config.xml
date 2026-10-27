@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="3e0778e5-5abb-41f0-b172-434603c649a7" xsi:noNamespaceSchemaLocation="https://www.jetbrains.com/teamcity/schemas/2025.3/project-config.xsd">
+  <name>&lt;Root project&gt;</name>
+  <description>Contains all other projects</description>
+  <project-extensions>
+    <extension id="AmazonWebServicesAws" type="OAuthProvider">
+      <parameters>
+        <param name="awsAccessKeyId" value="AKIA5JH2VERVDN3XW5GF" />
+        <param name="awsAllowedInBuilds" value="true" />
+        <param name="awsAllowedInSubProjects" value="true" />
+        <param name="awsCredentialsType" value="awsAccessKeys" />
+        <param name="awsIamRoleSessionName" value="TeamCity-session" />
+        <param name="awsRegionName" value="eu-west-1" />
+        <param name="awsSessionCredentials" value="true" />
+        <param name="awsStsEndpoint" value="https://sts.eu-west-1.amazonaws.com" />
+        <param name="displayName" value="Amazon Web Services (AWS)" />
+        <param name="providerType" value="AWS" />
+        <param name="secure:awsSecretAccessKey" value="credentialsJSON:94f6c635-5f4b-4b54-9d7c-c49a18bc9be3" />
+      </parameters>
+    </extension>
+    <extension id="PROJECT_EXT_1" type="ReportTab">
+      <parameters>
+        <param name="startPage" value="coverage.zip!index.html" />
+        <param name="title" value="Code Coverage" />
+        <param name="type" value="BuildReportTab" />
+      </parameters>
+    </extension>
+    <extension id="PROJECT_EXT_4" type="CloudImage">
+      <parameters>
+        <param name="agent_pool_id" value="0" />
+        <param name="amazon-id" value="ami-066857cb8cd020186" />
+        <param name="image-name-prefix" value="parent" />
+        <param name="image-priority" value="-2" />
+        <param name="instance-type" value="t3.medium" />
+        <param name="profileId" value="amazon-2" />
+        <param name="security-group-ids" value="sg-072d8bfa0626ea2a6" />
+        <param name="source-id" value="parent" />
+        <param name="subnet-id" value="subnet-0c4f70b91d8800740" />
+      </parameters>
+    </extension>
+    <extension id="PROJECT_EXT_6" type="versionedSettings">
+      <parameters>
+        <param name="buildSettings" value="ALWAYS_USE_CURRENT" />
+        <param name="credentialsStorageType" value="credentialsJSON" />
+        <param name="enabled" value="true" />
+        <param name="ignoreChangesInDependenciesAndVcsSettings" value="false" />
+        <param name="rootId" value="HttpsGithubComChubatovaTigerGradleTests" />
+        <param name="showChanges" value="false" />
+      </parameters>
+    </extension>
+    <extension id="amazon-2" type="CloudProfile">
+      <parameters>
+        <param name="awsConnectionId" value="AmazonWebServicesAws" />
+        <param name="cloud-code" value="amazon" />
+        <param name="description" value="" />
+        <param name="enabled" value="true" />
+        <param name="name" value="parent" />
+        <param name="profileId" value="amazon-2" />
+        <param name="region" value="eu-west-1" />
+        <param name="system.cloud.profile_id" value="amazon-2" />
+        <param name="terminate-idle-time" value="30" />
+        <param name="use-instance-iam-role" value="false" />
+      </parameters>
+    </extension>
+  </project-extensions>
+  <cleanup>
+    <options>
+      <option name="preventDependenciesArtifactsFromCleanup" value="false" />
+    </options>
+  </cleanup>
+</project>
+
