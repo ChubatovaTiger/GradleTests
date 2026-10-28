@@ -10,6 +10,13 @@
         <param name="providerType" value="KubernetesConnection" />
       </parameters>
     </extension>
+    <extension id="PROJECT_EXT_8" type="BuildExecutor">
+      <parameters>
+        <param name="connectionId" value="PROJECT_EXT_7" />
+        <param name="executorType" value="KubernetesExecutor" />
+        <param name="profileName" value="kub1" />
+      </parameters>
+    </extension>
   </project-extensions>
 </project>
 
