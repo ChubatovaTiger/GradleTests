@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="dc730abc-f8a1-465d-bc2e-7701745e5813" xsi:noNamespaceSchemaLocation="https://www.jetbrains.com/teamcity/schemas/2025.3/project-config.xsd">
+  <name>parkub2</name>
+  <project-extensions>
+    <extension id="PROJECT_EXT_13" type="OAuthProvider">
+      <parameters>
+        <param name="apiServerUrl" value="localhost:8091" />
+        <param name="authStrategy" value="unauthorized" />
+        <param name="displayName" value="Kubernetes Connection" />
+        <param name="providerType" value="KubernetesConnection" />
+      </parameters>
+    </extension>
+    <extension id="PROJECT_EXT_14" type="BuildExecutor">
+      <parameters>
+        <param name="connectionId" value="PROJECT_EXT_13" />
+        <param name="executorType" value="KubernetesExecutor" />
+        <param name="profileName" value="kub1" />
+      </parameters>
+    </extension>
+  </project-extensions>
+</project>
+
