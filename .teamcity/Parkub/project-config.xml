@@ -17,6 +17,19 @@
         <param name="profileName" value="kub1" />
       </parameters>
     </extension>
+    <extension id="amazon-4" type="CloudProfile">
+      <parameters>
+        <param name="awsConnectionId" value="AmazonWebServicesAws" />
+        <param name="cloud-code" value="amazon" />
+        <param name="description" value="" />
+        <param name="enabled" value="true" />
+        <param name="name" value="parkub" />
+        <param name="profileId" value="amazon-4" />
+        <param name="region" value="eu-west-1" />
+        <param name="terminate-idle-time" value="30" />
+        <param name="use-instance-iam-role" value="false" />
+      </parameters>
+    </extension>
   </project-extensions>
 </project>
 
